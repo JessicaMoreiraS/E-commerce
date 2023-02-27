@@ -1,0 +1,8 @@
+{
+    "produto1":{
+        "name":"VESTIDO TULE VERDE",
+        "image": "<img id='vestido_verde' src='../img/vestido-verde.png'>",
+        "price": 15.57,
+        "avaliacao": 4.5
+    }
+}

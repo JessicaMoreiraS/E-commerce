@@ -1,0 +1,548 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500&family=Bebas+Neue&family=Lobster&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e4dede;
+}
+
+header {
+  background-image: url("/img/degrade.png");
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-left: 2%;
+  padding-right: 2%;
+  height: 90px;
+  position: fixed;
+  top: 0;
+  width: 97%;
+  z-index: 999px;
+}
+
+img {
+  border-radius: 1%;
+  /* box-shadow: 1px 5px 9px #0f0f0f80; */
+  cursor: pointer;
+}
+
+#coracao,
+#usuario,
+#pesquisa,
+#carrinho {
+  margin-top: 15%;
+  width: 40px;
+  height: 45px;
+  box-shadow: none;
+}
+
+#logo {
+  width: 70px;
+  box-shadow: none;
+}
+
+h2 {
+  margin-left: -10%;
+  margin-top: 16%;
+  font-family: "Lobster", sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: bold;
+  font-size: 440%;
+  margin-left: 10%;
+}
+
+h3 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: bold;
+  font-size: 220%;
+  font-style: italic;
+  margin-left: 10%;
+}
+
+#alinhar-titulos {
+  margin-top: 13%;
+  background-color: #cbdbec;
+  display: flex;
+  flex-direction: column;
+}
+
+#icone-logo {
+  display: flex;
+  justify-content: center;
+}
+
+#icones-esquerda {
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+}
+
+#icones-direita {
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+}
+
+#categorias {
+  margin-top: 3%;
+}
+
+#icon-oculos,
+#icon-bolsa,
+#icon-chapeu,
+#icon-vestido,
+#icon-sapato,
+#icon-joia {
+  margin-top: 2%;
+  width: 40px;
+  height: 50px;
+  box-shadow: none;
+}
+
+p {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: bold;
+  font-size: 130%;
+}
+
+#oculos,
+#bolsas,
+#vestidos,
+#chapeus,
+#sapatos,
+#joias {
+  background-color: #b3b888;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 7%;
+}
+
+#oculos,
+#bolsas,
+#vestidos,
+#chapeus,
+#sapatos,
+#joias {
+  width: 300px;
+  box-shadow: none;
+}
+
+#categoria-1 {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1%;
+}
+#categoria-2 {
+  margin-top: 1%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1%;
+}
+
+#categorias {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#modelo-1,
+#modelo-2,
+#modelo-3 {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#modelo-dois,
+#modelo-tres {
+  width: 100%;
+  height: 100%;
+}
+
+#modelo-um{
+  margin-top: 24%;
+  width: 100%;
+  height: 77%;
+}
+
+#produtos-modelos {
+  gap: 2%;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.precos {
+  font-size: 160%;
+  margin-left: 1%;
+}
+
+#produtos-limitados {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5%;
+}
+
+#vestido-rosa,
+#vestido-verde {
+  width: 280px;
+}
+
+#vestido-roxo {
+  width: 300px;
+  height: 420px;
+}
+
+#vestido-1,
+#vestido-2,
+#vestido-3 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.linha {
+  margin-left: 5%;
+  margin-top: 7%;
+  height: 3px;
+  width: 90%;
+  border: none;
+  background-color: #727846;
+}
+
+h4 {
+  font-size: 350%;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.icon-direita,
+.icon-esquerda {
+  padding-top: 300%;
+  box-shadow: none;
+}
+
+footer {
+  margin-top: 10%;
+  background-image: url("/img/footer.jpg");
+  height: 300px;
+}
+
+@media screen and (max-width: 830px) {
+  #categoria-1,
+  #categoria-2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #categorias {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #chapeus,
+  #bolsas,
+  #joias,
+  #sapatos {
+    margin-top: 1%;
+  }
+  #modelo-1,
+  #modelo-2 {
+    display: none;
+  }
+  #produtos-modelos {
+    margin-top: 16%;
+  }
+  #alinhar-titulos{
+    margin-top: 30%;
+  }
+  #vestido-1,
+  #vestido-3 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+    #vestido-rosa, #vestido-verde{
+        width: 190px;
+    }
+    #vestido-roxo{
+        width: 190px;
+        height: 280px;
+    }
+    
+}
+
+
+#container-produto{
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+#titulo-produto{
+  font-size: 280%;
+  font-style: italic;
+}
+
+#foto-produto{
+  background-color: #cbdbec;
+  width: 50%;
+  height: 500px;
+  display: flex;
+  gap: 10%;
+  flex-direction: row;
+}
+
+#espaco-fotos{
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  margin-top: 7%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.caixa{
+  margin-top: 20%;
+  width: 70px;
+  height: 70px;
+  background-color: #B3B888;
+}
+
+#vestido_verde{
+  margin-top: 10%;
+  width: 40%;
+  height: 75%;
+}
+
+#detalhes-produto{
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  width: 50%;
+}
+
+#alinhar-estrelas{
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  gap: 2%;
+  margin-left: 10%;
+}
+
+#titulo-preco{
+  font-size: 200%;
+}
+
+#titulo-avaliacao{
+  font-style: italic;
+  margin-left: 10%;
+}
+
+#seta-btn{
+  width: 7%;
+}
+
+#botao-semelhantes{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 120%;
+  margin-top: 5%;
+  margin-left: 10%;
+  width: 250px;
+  height: 50px;
+  background-color: #C6BAD5;
+  border: none;
+}
+
+#frete{
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  margin-left: 40%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  gap: 4%;
+}
+
+#txt-frete{
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 130%;
+  font-weight: bold;
+  margin-left: 40%;
+}
+
+#alinhar-produtos{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+#menos, #mais{
+  width: 30px;
+  height: 30px;
+}
+
+#coracaoo{
+  width: 30px;
+  height: 30px;
+  margin-top: 0;
+}
+
+#funcao-frete{
+  padding-top: 3%;
+  background-color: #cbdbec;
+  width: 63%;
+}
+
+#funcao-compra{
+  margin-left: 10%;
+  width: 50%;
+}
+
+#funcao-quantidade, #comprar{
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  align-items: center;
+  gap: 2%;
+}
+
+#comprar{
+  margin-top: 2%;
+  gap: 2%;
+}
+
+#btn-compra{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 120%;
+  width: 140px;
+  height: 50px;
+  background-color: #b3b888;
+  border: none;
+  border-radius: 3px;
+}
+
+#btn-frete{
+  width: 130px;
+  height: 37px;
+  border: none;
+  background-color: #C6BAD5;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 115%;
+}
+
+input{
+  border: none;
+  outline: none;
+  width: 170px;
+  box-shadow: 1px 5px 9px #00000036;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+#outros-produtos{
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+#saia-rosa, #saia-azul, #saia-verde, #roxo-vestido{
+  width: 60%;
+}
+
+#seta-esquerda, #seta-direita{
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+button{
+  cursor: pointer;
+}
+
+@media screen and (max-width: 970px) {
+  #container-produto{
+    flex-direction: column;
+  }
+  #foto-produto{
+    gap: 0;
+    width: 100%;
+  }
+  #vestido_verde{
+    width: 290px;
+    height: 350px;
+  }
+  #alinhar-produtos{
+    flex-direction: column;
+  }
+  #detalhes-produto{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #funcao-frete{
+    margin-top: 5%;
+    width: 100%;
+  }
+  #funcao-compra{
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 0;
+  }
+  #funcao-quantidade, #comprar{
+    gap: 10%;
+  }
+  #img-1, #img-2, #img-4{
+    display: none;
+  }
+  #img-3{
+    margin-left: 20%;
+  }
+  #txt-frete{
+    text-align: center;
+  }
+  #frete{
+    margin-right: 10%;
+  }
+}
+
+/* @media screen and (max-width: 540px) {
+  #container-produto{
+    width: 150%;
+  }
+  #funcao-frete{
+    width: 150%;
+  }
+  #funcao-compra{
+    width: 150%;
+  }
+  .linha{
+    width: 140%;
+  }
+  .alinhar-txt{
+    width: 150%;
+  }
+  #outros-produtos{
+    width: 150%;
+  }
+  footer{
+    width: 150%;
+  }
+} */
