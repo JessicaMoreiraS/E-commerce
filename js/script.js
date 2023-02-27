@@ -77,7 +77,7 @@ function calcularFrete(){
         return;
     }else{
         const pesquisarCep = async () => {
-            const dados = await fetch(`http://viacep.com.br/ws/${cep}/json/`); //o fetch busca a url
+            const dados = await fetch(`https://viacep.com.br/ws/${cep}/json/`); //o fetch busca a url
             const endereco = await dados.json();
             console.log(endereco)
             var freteValor = 0.00.toFixed(2);
