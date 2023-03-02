@@ -112,6 +112,12 @@ console.log(x)
         converte(todosProds[x].price)
         avaliacao(todosProds[x].avaliacao)
         mostrarComentarios()
+        
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        })
     })
 }
 
