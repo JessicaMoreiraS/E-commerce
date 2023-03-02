@@ -70,10 +70,10 @@ function avaliacao(nEstrelas){
     }else{
         console.log(nEstrelas%2)
         if(nEstrelas%2 > 1){
-            var nEstrelasCheias = nEstrelas - nEstrelas%2+1
+            var nEstrelasCheias = nEstrelas - nEstrelas%2+1;
         }
         if(nEstrelas%2 < 1){
-            var nEstrelasCheias = nEstrelas - nEstrelas%2
+            var nEstrelasCheias = nEstrelas - nEstrelas%2;
         }
         for(a=0; a<nEstrelasCheias; a++){
             document.getElementById("alinhar-estrelas").innerHTML += "<img class=estrela src='imagens/estrelaCheia.png' width='6%'>"
