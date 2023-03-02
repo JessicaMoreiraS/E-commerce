@@ -64,7 +64,7 @@ function avaliacao(nEstrelas){
     
     if(nEstrelas%2 == 0 || nEstrelas%2 == 1){
         for(a=0; a<nEstrelas; a++){
-            document.getElementById("alinhar-estrelas").innerHTML += "<img class=estrela src='../imagens/estrelaCheia.png' width='6%'>"
+            document.getElementById("alinhar-estrelas").innerHTML += "<img class=estrela src='imagens/estrelaCheia.png' width='6%'>"
             totalEstrelasOcupadas = nEstrelas;
         }
     }else{
@@ -76,13 +76,13 @@ function avaliacao(nEstrelas){
             var nEstrelasCheias = nEstrelas - nEstrelas%2
         }
         for(a=0; a<nEstrelasCheias; a++){
-            document.getElementById("alinhar-estrelas").innerHTML += "<img class=estrela src='../imagens/estrelaCheia.png' width='6%'>"
+            document.getElementById("alinhar-estrelas").innerHTML += "<img class=estrela src='imagens/estrelaCheia.png' width='6%'>"
         }
-        document.getElementById("alinhar-estrelas").innerHTML += "<img class=estrela src='../imagens/meiaEstrela.png' width='6%'>"
+        document.getElementById("alinhar-estrelas").innerHTML += "<img class=estrela src='imagens/meiaEstrela.png' width='6%'>"
         totalEstrelasOcupadas = nEstrelasCheias +1;
     }
     for(c=0; c<totalEstrelas-totalEstrelasOcupadas; c++){
-        document.getElementById("alinhar-estrelas").innerHTML += "<img class=estrela src='../imagens/estrelaVazia.png' width='6%'>"
+        document.getElementById("alinhar-estrelas").innerHTML += "<img class=estrela src='imagens/estrelaVazia.png' width='6%'>"
     }
 
     if(nEstrelas >=4){
