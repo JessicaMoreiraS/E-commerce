@@ -5,9 +5,9 @@
         "price": 15.57,
         "avaliacao": 3.5,
         "comentarios":{
-            "nomes":["Adriana", "Duda", "Fabiola"],
-            "estrelas": [3, 5, 5],
-            "textos":["O tecido deixou a desejar.", "Bonito e chegou rápido", "Ameiii."]
+            "nomes":["Adriana", "Duda", "Fabiola", "Witória"],
+            "estrelas": [3, 5, 5, 4],
+            "textos":["O tecido deixou a desejar.", "Bonito e chegou rápido", "Só elogios, ótimo material!", "Seria melhor se houvessem outras opções de cores disponíveis"]
         }
     },
     "vestido2":{
@@ -16,9 +16,9 @@
         "price": 19.19,
         "avaliacao": 4.5,
         "comentarios":{
-            "nomes":["Ana", "Maria", "Claudia"],
-            "estrelas": [4, 5, 4],
-            "textos":["A qualidade do produto me impressionou.", "Gostei muito do produto! Tamanho fiel a foto", "Chegou dentro do prazo."]
+            "nomes":["Jane", "Maria", "Claudia", "Anne"],
+            "estrelas": [4, 5, 5, 2],
+            "textos":["A qualidade do produto me impressionou.", "Gostei muito do produto! Tamanho fiel a foto", "Chegou dentro do prazo.", "A cor que recebi difere do que eu pedi"]
         }
     },
     "vestido3":{
@@ -27,9 +27,9 @@
         "price": 24.37,
         "avaliacao": 4.5,
         "comentarios":{
-            "nomes":["Adriana", "Duda", "Fabiola"],
-            "estrelas": [3, 5, 5],
-            "textos":["O tecido deixou a desejar.", "Bonito e chegou rápido", "Ameiii."]
+            "nomes":["Bianca", "Anna", "Sarah", "Caroline"],
+            "estrelas": [3, 5, 5, 4],
+            "textos":["O tecido esquenta muito.", "Bonito e chegou rápido", "Ameiii.", "Estou apaixonada! Uma pena que demorou a chegar..."]
         }
     },
     "modelo1":{
@@ -38,9 +38,9 @@
         "price": 14.58,
         "avaliacao": 5.0,
         "comentarios":{
-            "nomes":["Ana", "Maria", "Claudia"],
-            "estrelas": [4, 5, 4],
-            "textos":["A qualidade do produto me impressionou.", "Gostei muito do produto! Tamanho fiel a foto", "Chegou dentro do prazo."]
+            "nomes":["Dara", "Rúbia", "Isabela", "Eliza"],
+            "estrelas": [5, 5, 5, 5],
+            "textos":["Modelo perfeito!", "Sem comentários... Belo.", "Comprei para uma festa! Só elogios", "Diferente e elegante"]
         }
     },
     "modelo2":{
@@ -49,9 +49,9 @@
         "price": 23.32,
         "avaliacao": 5.0,
         "comentarios":{
-            "nomes":["Adriana", "Duda", "Fabiola"],
-            "estrelas": [3, 5, 5],
-            "textos":["O tecido deixou a desejar.", "Bonito e chegou rápido", "Ameiii."]
+            "nomes":["Esther", "Emily", "Carla", "Adryana"],
+            "estrelas": [3, 5, 5, 4],
+            "textos":["Modelo pequeno", "Uma graça!", "Comprei para a minha filha, ela amou!", "Lindo!"]
         }
     },
     "modelo3":{
@@ -60,9 +60,9 @@
         "price": 19.29,
         "avaliacao": 4.0,
         "comentarios":{
-            "nomes":["Ana", "Maria", "Claudia"],
-            "estrelas": [4, 5, 4],
-            "textos":["A qualidade do produto me impressionou.", "Gostei muito do produto! Tamanho fiel a foto", "Chegou dentro do prazo."]
+            "nomes":["Camila", "Juliana", "Evelyn", "Jeniffer"],
+            "estrelas": [5, 5, 4, 5],
+            "textos":["Adorável.", "Melhor ainda pessoalmente", "Chegou dentro do prazo.", "Amo os modelos de vocês!"]
         }
     },
     "saia1":{
@@ -71,9 +71,9 @@
         "price": 15.59,
         "avaliacao": 3.0,
         "comentarios":{
-            "nomes":["Adriana", "Duda", "Fabiola"],
-            "estrelas": [3, 5, 5],
-            "textos":["O tecido deixou a desejar.", "Bonito e chegou rápido", "Ameiii."]
+            "nomes":["Júlia", "Eduarda", "Deise", "Carol"],
+            "estrelas": [3, 5, 5, 5],
+            "textos":["O tecido deixou a desejar.", "Uma das melhores compras que fiz no site", "Ameiii", "Chegou antes do prazo!"]
         }
     },
     "saia2":{
@@ -82,9 +82,9 @@
         "price": 21.59,
         "avaliacao": 5.0,
         "comentarios":{
-            "nomes":["Ana", "Maria", "Claudia"],
-            "estrelas": [4, 5, 4],
-            "textos":["A qualidade do produto me impressionou.", "Gostei muito do produto! Tamanho fiel a foto", "Chegou dentro do prazo."]
+            "nomes":["Ana", "Maria", "Claudia", "Ingrid"],
+            "estrelas": [4, 5, 5, 5],
+            "textos":["Tamanho ideal.", "Confortável e linda", "Chegou antes do prazo", "Recomendo este produto"]
         }
     },
     "saia3":{
@@ -93,9 +93,9 @@
         "price": 16.20,
         "avaliacao": 4.5,
         "comentarios":{
-            "nomes":["Adriana", "Duda", "Fabiola"],
-            "estrelas": [3, 5, 5],
-            "textos":["O tecido deixou a desejar.", "Bonito e chegou rápido", "Ameiii."]
+            "nomes":["Samantha", "Duda", "Darcy", "Carolina"],
+            "estrelas": [1, 2, 4, 3],
+            "textos":["Elástico da cintura muito pequeno", "A cor é bonita, mas o modelo é pequeno", "Bonita e confortável", "Senti falta de modelos plus size!"]
         }
     },
     "vestido4":{
@@ -104,9 +104,9 @@
         "price": 22.39,
         "avaliacao": 2.5,
         "comentarios":{
-            "nomes":["Ana", "Maria", "Claudia"],
-            "estrelas": [4, 5, 4],
-            "textos":["A qualidade do produto me impressionou.", "Gostei muito do produto! Tamanho fiel a foto", "Chegou dentro do prazo."]
+            "nomes":["Diana", "Wendy", "Angélica", "Tamires"],
+            "estrelas": [5, 5, 5, 5],
+            "textos":["Chegou rápido", "Lindo e delicado", "Vestido perfeito!", "Comprei para o meu aniversário e foi um sucesso"]
         }
     }
     
