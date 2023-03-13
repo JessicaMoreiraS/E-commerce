@@ -26,19 +26,34 @@ img {
 }
 
 #coracao,
-#usuario,
 #pesquisa,
-#carrinho, #voltar {
+#voltar {
   margin-top: 15%;
   width: 40px;
   height: 45px;
   box-shadow: none;
+  transition: 400ms;
+}
+
+#carrinho, #usuario{
+  margin-top: 14%;
+  width: 44px;
+  height: 50px;
+  transition: 400ms;
 }
 
 #btn-coracao{
   background-color: transparent;
   border: none;
 }
+
+#coracao:hover, #usuario:hover, #pesquisa:hover, #voltar:hover, #carrinho:hover{
+  background-color: rgba(150, 127, 161, 0.514);
+  border-radius: 70px;
+  cursor: pointer;
+  transform: scale(92%)
+}
+
 
 #logo {
   width: 70px;
@@ -134,6 +149,16 @@ p {
   justify-content: center;
   flex-direction: row;
   gap: 7%;
+  transition: 400ms;
+}
+
+#oculos:hover,
+#bolsas:hover,
+#vestidos:hover,
+#chapeus:hover,
+#sapatos:hover,
+#joias:hover{
+  background-color: #bfc2a6;
 }
 
 #oculos,
@@ -144,6 +169,7 @@ p {
 #joias {
   width: 300px;
   box-shadow: none;
+  cursor: pointer;
 }
 
 #categoria-1 {
@@ -173,6 +199,23 @@ p {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  transition: transform .5s;
+}
+
+#modelo-1:hover,
+#modelo-2:hover,
+#modelo-3:hover{
+  transform: scale(105%); 
+  cursor: pointer;
+}
+
+#img-1, #img-2, #img-3, #img-4{
+  transition: transform .5s;
+}
+
+#img-1:hover, #img-2:hover, #img-3:hover, #img-4:hover{
+  transform: scale(105%); 
+  cursor: pointer;
 }
 
 #modelo-dois,
@@ -224,6 +267,7 @@ p {
 #vestido-roxo {
   width: 300px;
   height: 420px;
+
 }
 
 #vestido-1,
@@ -233,7 +277,16 @@ p {
   justify-content: center;
   flex-direction: column;
   height: 100%;
+  transition: transform .5s;
 }
+
+#vestido-1:hover,
+#vestido-2:hover,
+#vestido-3:hover{
+  transform: scale(105%); 
+  cursor: pointer;
+}
+
 
 .linha {
   margin-left: 5%;
@@ -398,7 +451,14 @@ footer {
   height: 50px;
   background-color: #C6BAD5;
   border: none;
+  transition: 600ms;
 }
+
+#botao-semelhantes:hover{
+  background-color: #b2a4c4;
+
+}
+
 
 #frete{
   display: flex;
@@ -497,7 +557,14 @@ footer {
   background-color: #b3b888;
   border: none;
   border-radius: 3px;
+  transition: 700ms;
 }
+
+#btn-compra:hover{
+ 
+  background-color: #9da178;
+}
+
 
 #btn-frete{
   width: 130px;
@@ -506,6 +573,11 @@ footer {
   background-color: #C6BAD5;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 115%;
+  transition: 600ms;
+}
+
+#btn-frete:hover{
+  background-color: #b2a4c4;
 }
 
 input{
