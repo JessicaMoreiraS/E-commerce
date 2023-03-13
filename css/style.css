@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  background-image: url("/img/degrade.png");
+  background-image: url("../img/degrade.png");
   display: flex;
   justify-content: space-between;
   flex-direction: row;
