@@ -321,7 +321,7 @@ h4 {
 
 footer {
   margin-top: 10%;
-  background-image: url("/img/footer.jpg");
+  background-image: url("../img/footer.jpg");
   height: 300px;
 }
 
