@@ -1,5 +1,7 @@
 var regioesBrasil = [["Norte", "AM"], ["Norte", "RR"], ["Norte", "AP"], ["Norte", "PA"], ["Norte", "TO"], ["Norte", "RO"], ["Norte", "AC"], ["Nordeste", "MA"], ["Nordeste", "PI"], ["Nordeste", "CE"], ["Nordeste", "RN"], ["Nordeste", "PE"], ["Nordeste", "PB"], ["Nordeste", "SE"], ["Nordeste", "AL"], ["Nordeste", "BA"], ["Centro-Oeste", "MT"], ["Centro-Oeste", "DF"], ["Centro-Oeste", "MS"], ["Centro-Oeste", "GO"], ["Sudeste", "SP"], ["Sudeste", "RJ"], ["Sudeste", "ES"], ["Sudeste", "MG"], ["Sul", "PR"], ["Sul", "RS"], ["Sul", "SC"]]
 
+var novoComentario = []
+
 index()
 function index(){
     document.title = "home";
@@ -10,52 +12,30 @@ function produtos(nProd){
     document.getElementById("main").innerHTML = '<div id="container-produto"><div id="foto-produto"><div id="espaco-fotos"><div class="caixa"></div><div class="caixa"></div><div class="caixa"></div><div class="caixa"></div><div class="caixa"></div></div><!--<img id="vestido_verde" src="img/vestido-verde.png" alt="" />--></div><div id="detalhes-produto"><h1 id="titulo-produto"></h1><h3 id="titulo-preco"></h3><!-- <div> Ícones feitos por <a href="https://www.flaticon.com/br/autores/smashicons" title="Smashicons"> Smashicons </a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com"</a></div> --><div id="alinhar-estrelas"></div><p id="titulo-avaliacao"></p><div id="produtos-semelhantes"><button id="botao-semelhantes">MODELOS SEMELHANTES <img id="seta-btn" src="img/seta-btn.png" alt="" /></button></div></div></div><!--Frete--><div id="alinhar-produtos"><div id="funcao-frete"><label id="txt-frete" for="">CALCULE O FRETE:</label><div id="frete"><input type="number" id="cep" placeholder="CEP"><button id="btn-frete" onclick="calcularFrete()">CALCULAR</button><div id="valorFrete"></div></div></div><div id="funcao-compra"><div id="funcao-quantidade"><p>QUANTIDADE</p><button id="btn-menos" onclick="diminuiQuantCompra()"><img id="menos" src="img/menos.png" alt="" /></button><input type="number" id="quantProd" value="1" readonly><button onclick="aumentaQuantCompra()"id="btn-mais"><img id="mais" src="img/mais.png" alt="" /></button></div><div id="comprar"><button id="btn-compra">COMPRAR</button><button id="btn-coracao" onclick="favoritar()"><img id="coracaoo" src="img/coracao-vazio.png"></button></div></div></div><div class="linha"></div>'
     document.getElementById("main").innerHTML += '<div class="alinhar-txt" id="texto-produtos-limitados"><h4>OUTROS PRODUTOS</h4></div><div id="outros-produtos"><div id="seta-esquerda"><img src="img/esquerda.png" alt=""/></div><div id="img-1"><p id="txt-outros-produtos">SAIA MEDIUM VERDE</p><img id="saia-verde" src="img/saia-verde.png" alt=""  onclick="selecionaProd(7)"/><p id="preco">R$81,65</p></div><div id="img-2"><p id="txt-outros-produtos">SAIA COM BRILHO AZUL</p><img id="saia-azul" src="img/saia-azul.png" alt="" onclick="selecionaProd(8)"/><p id="preco">R$112,08</p></div><div id="img-3"><p id="txt-outros-produtos">VESTIDO LILÁS COM BOTÕES</p><img id="roxo-vestido" src="img/roxo-vestido.jpg" alt="" onclick="selecionaProd(3)"/><p id="preco">R$116,24</p></div><div id="img-4"><p id="txt-outros-produtos">SAIA LONGA ROSA</p><img id="saia-rosa" src="img/saia-rosa.png" alt="" onclick="selecionaProd(9)"/><p id="preco">R$84,10</p></div><div id="seta-direita"><img src="img/direita.png" alt="" /></div></div>'
 
-    document.getElementById("main").innerHTML += '<div id="avaliacao"><div id="titulo-avaliacao"><h4 id="avaliacao">AVALIAÇÕES</h4></div></div><div id="titulo-comentarios"><img id="icone-avaliacao" src="img/icone-avaliacao.png" alt="" /><h5>TODOS OS COMENTÁRIOS</h5></div><div class="linhaa"></div><div id="central"><div id="caixa-comentarios">'+'<div id="nomeUser"><div id="comentarioBox"></div>'+'<div id="funcoes-comentario"><button id="btn-comentar" onclick="novoComentar()"><img id="icon-escrever" src="img/escrever.png" alt="" /></button><button id="btn-comentarios"><img id="icon-seta-btn" src="img/seta-btn.png" alt="" /></button></div></div></div></div></div>'
+    document.getElementById("main").innerHTML += '<div id="avaliacao"><div id="titulo-avaliacao"><h4 id="avaliacao">AVALIAÇÕES</h4></div></div><div id="titulo-comentarios"><img id="icone-avaliacao" src="img/icone-avaliacao.png" alt="" /><h5>TODOS OS COMENTÁRIOS</h5></div><div class="linhaa"></div><div id="central"><div id="caixa-comentarios">'+'<div id="nomeUser"><div id="comentarioBox"></div>'+'<div id="funcoes-comentario"><button id="btn-comentar" onclick="novoComentar('+nProd+')"><img id="icon-escrever" src="img/escrever.png" alt="" /></button><button id="btn-comentarios"><img id="icon-seta-btn" src="img/seta-btn.png" alt="" /></button></div></div></div></div></div>'
 
     dados(nProd)
 }
 
 
-
-//COMENTÁRIOS RANDÔMICOS, CONTAINER AVALIAÇÃO
-function mostrarComentarios(vetor, nProduto){
-    fetch('produtos.json')
-    .then(response => response.json())
-    .then(corpo => { 
-        vetor;
-        for(b=0; b<3; b++){
-            var numAleatorio = Math.floor(Math.random() * vetor[nProduto].comentarios.nomes.length);
-            var nComentarioJaImpresso = []
-            if(!nComentarioJaImpresso.includes(numAleatorio)){
-                document.getElementById("comentarioBox").innerHTML += "<div id='divNome'><p>"+vetor[nProduto].comentarios.nomes[numAleatorio]+"</p></div>"
-                for(a=0; a<vetor[nProduto].comentarios.estrelas[numAleatorio]; a++){
-                    document.getElementById("comentarioBox").innerHTML +="<img src=imagens/estrelaCheia.png width='3%'>"
-                }
-                document.getElementById("comentarioBox").innerHTML += "<div id='nota'><p>"+vetor[nProduto].comentarios.estrelas[numAleatorio]+"</p></div>"
-                document.getElementById("comentarioBox").innerHTML += "<div id='comentario'><p>"+vetor[nProduto].comentarios.textos[numAleatorio]+"</p></div>"
-                nComentarioJaImpresso.push(numAleatorio);
-            }else{
-                b--;
-            }
-        }
-    })
-}
-
-function alertComentario(){
+function novoComentar(nProd){
     swal("Write something here:", {
         content: "input",
-      })
-      .then((value) => {
-        swal(`You typed: ${value}`);
-        teste = value;
-        return teste
-      });
-      
-}
 
-function novoComentar(){
-   var textoComentario = alertComentario()
-   console.log(textoComentario)
+        input: 'checkbox',
+        inputValue: 1,
+        inputPlaceholder:
+          'I agree with the terms and conditions',
+        inputValidator: (result) => {
+          return !result && 'You need to agree with T&C'
+        }
+    })
+    .then((value) => {
+        swal(`You typed: ${value}`);
+        texto = value;
+        novoComentario.push([nProd, "nome", 1, texto]);
+        produtos(nProd)
+    });
 }
 
 function arredondar(n) {
@@ -110,10 +90,33 @@ function avaliacao(nEstrelas){
     }
 }
 
-// if (window.open && posicao != -1) { // Window.opener/open recebe os dados da página que gerou a atual
-//     console.log("open")
-//     //dados(2)
-// } 
+
+//COMENTÁRIOS (3 ultimos)
+function mostrarComentarios(vetor, nProduto){ 
+    vetor;
+
+    if(novoComentario.length>0){
+        console.log("aqui oh "+novoComentario.length)
+        for(x=0; x<novoComentario.length; x++){
+            numeroProd = novoComentario[x][0]
+            vetor[numeroProd].comentarios.nomes.push(novoComentario[x][1])
+            vetor[numeroProd].comentarios.estrelas.push(novoComentario[x][2])
+            vetor[numeroProd].comentarios.textos.push(novoComentario[x][3])
+            console.log(vetor[nProduto].comentarios.textos[vetor[nProduto].comentarios.nomes.length-1])
+        }
+    }
+
+    document.getElementById("comentarioBox").innerHTML ="" 
+    for(b=vetor[nProduto].comentarios.nomes.length-1; b>=vetor[nProduto].comentarios.nomes.length-3; b=b-1){
+        console.log(b)
+        document.getElementById("comentarioBox").innerHTML += "<div id='divNome'><p>"+vetor[nProduto].comentarios.nomes[b]+"</p></div>"
+        for(a=0; a<vetor[nProduto].comentarios.estrelas[b]; a++){
+            document.getElementById("comentarioBox").innerHTML +="<img src=imagens/estrelaCheia.png width='3%'>"
+        }
+        document.getElementById("comentarioBox").innerHTML += "<div id='nota'><p>"+vetor[nProduto].comentarios.estrelas[b]+"</p></div>"
+        document.getElementById("comentarioBox").innerHTML += "<div id='comentario'><p>"+vetor[nProduto].comentarios.textos[b] +"</p></div>"
+    }    
+}
 
 function dados(x){
 //Metodo fetch() para buscar o arquivo produtos.json transformando o resultado em um objeto usando o metodo response.json()
@@ -274,4 +277,7 @@ function selecionaProd(a){
 // FAVORITAR UM PRODUTO
 
 
-
+// if (window.open && posicao != -1) { // Window.opener/open recebe os dados da página que gerou a atual
+//     console.log("open")
+//     //dados(2)
+// } 
