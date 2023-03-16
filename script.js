@@ -49,7 +49,11 @@ function login(){
                 }).then((userSenha) => {console.log(userSenha)              
                     verificaSenha(userSenha, senhaCorreta, usuarioTentandoSeConectar)
                 },
-            )}
+            )}else{
+                if(x==usuarios.length-1){
+                    swal("Esse email não está cadastrado. Login não realizado")
+                }
+            }
         }
     })
 }
