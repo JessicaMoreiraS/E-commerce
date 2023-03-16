@@ -43,16 +43,17 @@ function login(){
                         element:"input",
                         attributes:{
                             type:"password",
-                            placeholder:"1234"
+                            placeholder: "1234",
                         }
                     }
                 }).then((userSenha) => {console.log(userSenha)              
                     verificaSenha(userSenha, senhaCorreta, usuarioTentandoSeConectar)
-                },
-            )}else{
-                if(x==usuarios.length-1){
-                    swal("Esse email não está cadastrado. Login não realizado")
-                }
+                })
+                return;
+            }
+            if(x==usuarios.length-1){
+                swal("Esse email não está cadastrado. Login não realizado")
+                return;
             }
         }
     })
