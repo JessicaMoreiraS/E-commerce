@@ -28,8 +28,8 @@ function login(){
     swal("Digite seu email",{
         content:{
             element: "input",
-            atrributes: {
-                placeholder: "usuario@gmail.com",
+            attributes: {
+                placeholder: "maria@gmail.com",
                 type:"email",
             }
         }
@@ -41,9 +41,9 @@ function login(){
                 swal("Olá "+usuarios[x].nome+". Digite sua senha",{
                     content:{
                         element:"input",
-                        atrributes:{
+                        attributes:{
                             type:"password",
-                            placeholder:"senha"
+                            placeholder:"1234"
                         }
                     }
                 }).then((userSenha) => {console.log(userSenha)              
