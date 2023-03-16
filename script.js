@@ -8,7 +8,7 @@ function index(){
     document.getElementById("main").innerHTML = '<div id="alinhar-titulos"><div id="container-titulo"><h1>A ASCENSÃO DO<br />VINTAGE 60"S</h1></div><div id="container-subtitulo"><h3>OS MELHORES VESTIDOS DA ÉPOCA</h3></div></div>'+'<div id="categorias"><div id="categoria-1"><div id="oculos"><img id="icon-oculos" src="img/icon-oculos.png" alt="" /><p>ÓCULOS</p></div><div id="bolsas"><img id="icon-bolsa" src="img/icon-bolsa.png" alt="" /><p>BOLSAS</p></div><div id="chapeus"><img id="icon-chapeu" src="img/icon-boina.png" alt="" /><p>CHAPÉUS</p></div></div><div id="categoria-2"><div id="vestidos"><img id="icon-vestido" src="img/icon-vestido.png" alt="" /><p>VESTIDOS</p></div><div id="sapatos"><img id="icon-sapato" src="img/icon-sapato.png" alt="" /><p>SAPATOS</p></div><div id="joias"><img id="icon-joia" src="img/icon-joias.png" alt="" /><p>JOIAS</p></div></div></div><!-- PRODUTOS --><div id="produtos-modelos"><div class="seta-esquerda"><a href="produtos.html"><img class="icon-esquerda" src="img/esquerda.png" alt=""/></a></div><div id="modelo-1"><img id="modelo-um" src="img/modelo-1.png" alt="" onclick="selecionaProd(4)"/><p class="precos">R$75,90</p></div><div id="modelo-2"><img id="modelo-dois" src="img/modelo-2.png" alt="" onclick="selecionaProd(5)"/><p class="precos">R$120,90</p></div><div id="modelo-3"><img id="modelo-tres" src="img/modelo-3.png" alt="" onclick="selecionaProd(6)"/><p class="precos">R$99,90</p></div><div class="seta-direita"><img class="icon-direita" src="img/direita.png" alt=""/></div></div><div class="linha"></div>'+'<!-- PRODUTOS LIMITADOS --><div id="texto-produtos-limitados"><h4>PRODUTOS LIMITADOS</h4></div><div id="produtos-limitados"><div class="seta-esquerda"><img class="icon-esquerda" src="img/esquerda.png" alt="" /></div><div id="vestido-1"><img id="vestido-rosa" src="img/vestido-rosa.png" alt="" onclick="selecionaProd(1)"/><p class="precos">R$99,90</p></div><div id="vestido-2"><img id="vestido-verde" src="img/vestido-verde.png" alt="" onclick="selecionaProd(0)"/><p class="precos">R$112,90</p></div><div id="vestido-3"><img id="vestido-roxo" src="img/vestid-roxo.png" alt="" onclick="selecionaProd(2)"/><p class="precos">R$126,90</p></div><div class="seta-direita"><img class="icon-direita" src="img/direita.png" alt="" /> </div></div></main>'
 }
 
-function produtos(nProd){
+function selecionaProd(nProd){
     document.getElementById("main").innerHTML = '<div id="container-produto"><div id="foto-produto"><div id="espaco-fotos"><div class="caixa"></div><div class="caixa"></div><div class="caixa"></div><div class="caixa"></div><div class="caixa"></div></div><!--<img id="vestido_verde" src="img/vestido-verde.png" alt="" />--></div><div id="detalhes-produto"><h1 id="titulo-produto"></h1><h3 id="titulo-preco"></h3><!-- <div> Ícones feitos por <a href="https://www.flaticon.com/br/autores/smashicons" title="Smashicons"> Smashicons </a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com"</a></div> --><div id="alinhar-estrelas"></div><p id="titulo-avaliacao"></p><div id="produtos-semelhantes"><button id="botao-semelhantes">MODELOS SEMELHANTES <img id="seta-btn" src="img/seta-btn.png" alt="" /></button></div></div></div><!--Frete--><div id="alinhar-produtos"><div id="funcao-frete"><label id="txt-frete" for="">CALCULE O FRETE:</label><div id="frete"><input type="number" id="cep" placeholder="CEP"><button id="btn-frete" onclick="calcularFrete()">CALCULAR</button><div id="valorFrete"></div></div></div><div id="funcao-compra"><div id="funcao-quantidade"><p>QUANTIDADE</p><button id="btn-menos" onclick="diminuiQuantCompra()"><img id="menos" src="img/menos.png" alt="" /></button><input type="number" id="quantProd" value="1" readonly><button onclick="aumentaQuantCompra()"id="btn-mais"><img id="mais" src="img/mais.png" alt="" /></button></div><div id="comprar"><button id="btn-compra">COMPRAR</button><button id="btn-coracao" onclick="favoritar()"><img id="coracaoo" src="img/coracao-vazio.png"></button></div></div></div><div class="linha"></div>'
     document.getElementById("main").innerHTML += '<div class="alinhar-txt" id="texto-produtos-limitados"><h4>OUTROS PRODUTOS</h4></div><div id="outros-produtos"><div id="seta-esquerda"><img src="img/esquerda.png" alt=""/></div><div id="img-1"><p id="txt-outros-produtos">SAIA MEDIUM VERDE</p><img id="saia-verde" src="img/saia-verde.png" alt=""  onclick="selecionaProd(7)"/><p id="preco">R$81,65</p></div><div id="img-2"><p id="txt-outros-produtos">SAIA COM BRILHO AZUL</p><img id="saia-azul" src="img/saia-azul.png" alt="" onclick="selecionaProd(8)"/><p id="preco">R$112,08</p></div><div id="img-3"><p id="txt-outros-produtos">VESTIDO LILÁS COM BOTÕES</p><img id="roxo-vestido" src="img/roxo-vestido.jpg" alt="" onclick="selecionaProd(3)"/><p id="preco">R$116,24</p></div><div id="img-4"><p id="txt-outros-produtos">SAIA LONGA ROSA</p><img id="saia-rosa" src="img/saia-rosa.png" alt="" onclick="selecionaProd(9)"/><p id="preco">R$84,10</p></div><div id="seta-direita"><img src="img/direita.png" alt="" /></div></div>'
 
@@ -100,7 +100,7 @@ function novoComentar(nProd){
             swal(`Seu comentario é: ${value}`);
             texto = value;
             novoComentario.push([nProd, usuarioConectado.nome, valuee, texto]);
-            produtos(nProd)
+            selecionaProd(nProd)
         });
     })
 }
@@ -160,19 +160,6 @@ function avaliacao(nEstrelas){
 
 //COMENTÁRIOS (3 ultimos)
 function mostrarComentarios(vetor, nProduto){ 
-    vetor;
-
-    if(novoComentario.length>0){
-        console.log("aqui oh "+novoComentario.length)
-        for(x=0; x<novoComentario.length; x++){
-            numeroProd = novoComentario[x][0]
-            vetor[numeroProd].comentarios.nomes.push(novoComentario[x][1])
-            vetor[numeroProd].comentarios.estrelas.push(novoComentario[x][2])
-            vetor[numeroProd].comentarios.textos.push(novoComentario[x][3])
-            console.log(vetor[nProduto].comentarios.textos[vetor[nProduto].comentarios.nomes.length-1])
-        }
-    }
-
     document.getElementById("comentarioBox").innerHTML ="" 
     for(b=vetor[nProduto].comentarios.nomes.length-1; b>=vetor[nProduto].comentarios.nomes.length-3; b=b-1){
         console.log(b)
@@ -200,6 +187,24 @@ console.log(x)
         document.getElementById("titulo-preco").innerHTML += "US$"+todosProds[x].price; 
 
         document.getElementById("main").innerHTML += ''
+
+        //atualizando comentarios
+        if(novoComentario.length>0){
+            for(w=0; w<novoComentario.length; w++){
+                numeroProd = novoComentario[w][0]
+                todosProds[numeroProd].comentarios.nomes.push(novoComentario[w][1])
+                todosProds[numeroProd].comentarios.estrelas.push(novoComentario[w][2])
+                todosProds[numeroProd].comentarios.textos.push(novoComentario[w][3])
+                console.log(todosProds[x].comentarios.textos[todosProds[x].comentarios.nomes.length-1])
+            }
+        }
+        //soma todas as estrelas
+        var totalPontosEstrelas=0
+        for(y=0; y<todosProds[x].comentarios.estrelas.length; y++){
+            totalPontosEstrelas += parseInt(todosProds[x].comentarios.estrelas[y])
+        }
+        todosProds[x].avaliacao = totalPontosEstrelas/todosProds[x].comentarios.estrelas.length
+        console.log("total estrelas"+todosProds[x].avaliacao)
 
         converte(todosProds[x].price)
         avaliacao(todosProds[x].avaliacao)
@@ -330,10 +335,10 @@ function diminuiQuantCompra(){
     document.getElementById("quantProd").value = quantProd
 }
 
-function selecionaProd(a){
-    produtos(a)
+//function selecionaProd(a){
+    //produtos(a)
    //window.location='produto.html'   //redirecionamento
-}
+//}
 
 /*fetch('produtos.json')
 .then(response => response.json())
