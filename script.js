@@ -19,7 +19,6 @@ function selecionaProd(nProd){
     fetch('produtos.json')
     .then(response => response.json())
     .then(corpo => { 
-        /*console.log(corpo.posicao.numero)*/
         document.title = "produtos";
         var todosProds = [corpo.vestido1, corpo.vestido2, corpo.vestido3, corpo.vestido4, corpo.modelo1, corpo.modelo2, corpo.modelo3, corpo.saia1, corpo.saia2, corpo.saia3]   
         listaGlobal = todosProds
@@ -43,7 +42,7 @@ function selecionaProd(nProd){
                 todosProds[numeroProd].comentarios.nomes.push(novoComentario[w][1])
                 todosProds[numeroProd].comentarios.estrelas.push(novoComentario[w][2])
                 todosProds[numeroProd].comentarios.textos.push(novoComentario[w][3])
-                console.log(todosProds[nProd].comentarios.textos[todosProds[nProd].comentarios.nomes.length-1])
+                //console.log(todosProds[nProd].comentarios.textos[todosProds[nProd].comentarios.nomes.length-1])
             }
         }
         //soma todas as estrelas
@@ -52,7 +51,7 @@ function selecionaProd(nProd){
             totalPontosEstrelas += parseInt(todosProds[nProd].comentarios.estrelas[y])
         }
         todosProds[nProd].avaliacao = totalPontosEstrelas/todosProds[nProd].comentarios.estrelas.length
-        console.log("total estrelas"+todosProds[nProd].avaliacao)
+        console.log("total estrelas: "+todosProds[nProd].avaliacao)
 
         converte(todosProds[nProd].price)
         avaliacao(todosProds[nProd].avaliacao)
@@ -83,7 +82,7 @@ function login(){
                 type:"email",
             }
         }
-    }).then((userEmail) => {console.log(userEmail)
+    }).then((userEmail) => {
         for(x=0;x<usuarios.length; x++){
             if(usuarios[x].email == userEmail){
                 senhaCorreta = usuarios[x].senha
@@ -96,7 +95,7 @@ function login(){
                             placeholder: "1234",
                         }
                     }
-                }).then((userSenha) => {console.log(userSenha)              
+                }).then((userSenha) => {              
                     verificaSenha(userSenha, senhaCorreta, usuarioTentandoSeConectar)
                 })
                 return;
@@ -134,7 +133,7 @@ function novoComentar(nProd){
                 max: 5
             },
          }
-    }).then((valuee) => {console.log(valuee)
+    }).then((valuee) => {
         if(valuee == "" || valuee == null){
             swal("Ops, escolha uma nota entre 0 e 5")
             return;
@@ -208,7 +207,6 @@ function avaliacao(nEstrelas){
             totalEstrelasOcupadas = nEstrelas;
         }
     }else{
-        console.log(nEstrelas%2)
         if(nEstrelas%2 > 1){
             var nEstrelasCheias = nEstrelas - nEstrelas%2+1;
         }
@@ -235,7 +233,6 @@ function avaliacao(nEstrelas){
 function mostrarComentarios(vetor, nProduto){ 
     document.getElementById("comentarioBox").innerHTML ="" 
     for(b=vetor[nProduto].comentarios.nomes.length-1; b>=vetor[nProduto].comentarios.nomes.length-3; b=b-1){
-        console.log(b)
         document.getElementById("comentarioBox").innerHTML += "<div id='divNome'><p>"+vetor[nProduto].comentarios.nomes[b]+"</p></div>"
         for(a=0; a<vetor[nProduto].comentarios.estrelas[b]; a++){
             document.getElementById("comentarioBox").innerHTML +="<img src=imagens/estrelaCheia.png width='3%'>"
@@ -251,7 +248,7 @@ function calcularFrete(){
     var cep = document.getElementById("cep").value
     var exibirFrete = document.getElementById("valorFrete")
     if(cep.length != 8){
-        console.log("cep incorreto");
+        swal("cep incorreto");
         return;
     }else{
         const pesquisarCep = async () => {
@@ -263,8 +260,6 @@ function calcularFrete(){
 
             for(x=0; x < regioesBrasil.length; x++){
                 if(regioesBrasil[x][1] == endereco.uf){
-                    console.log(regioesBrasil[x][0]);
-                    console.log(regioesBrasil[x][1]);
 
                     if(regioesBrasil[x][1] != "SP"){
                         if(regioesBrasil[x][0] == "Sul"){
@@ -290,7 +285,6 @@ function calcularFrete(){
                     }else{
                         if(regioesBrasil[x][1] == "SP"){
                             var cepSp = parseInt(cep)
-                            console.log("CEP de SP: "+ cepSp)
                             if(cepSp>= 1000000 && cepSp<= 1579999){
                                 //centro
                                 freteValor = 3.00.toFixed(2)
@@ -342,7 +336,6 @@ function calcularFrete(){
                 }
             }
             exibirFrete.innerHTML = "Para a região de "+regiao+" o frete é de R$"+freteValor
-
         }
         pesquisarCep();
     }
@@ -376,11 +369,11 @@ function favoritar(nProd){
                 Mantem: true,
                 Excluir: true,
               },}
-            ).then((valor) => {console.log(valor)
-                if(valor == "Mantem"){
+            ).then((valor) => {
+                if(valor == "Excluir"){
+                    usuarioConectado.favoritos[x] = null
                     return;
                 }else{
-                    usuarioConectado.favoritos[x] = null
                     return;
                 }
             })
@@ -388,7 +381,9 @@ function favoritar(nProd){
         }
     }
     usuarioConectado.favoritos.push(nProd);
-    console.log("produtos favoritos: "+ usuarioConectado.favoritos)
+    swal("Adicionado a lista de desejos!", {
+        button: false,
+    });
 }
 
 function mostrarListaDeDesejos(){
@@ -405,9 +400,6 @@ function mostrarListaDeDesejos(){
             }    
         }
     }
-    // else{
-    //     swal("sua lista ainda está vazia")
-    // }
 }
 
 
