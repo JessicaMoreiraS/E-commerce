@@ -20,7 +20,10 @@
 <header>
   <div id="icones-esquerda">
     <img id="voltar" src="img/icon-voltar.png" alt="" onclick="index()">
-    <img id="coracao" src="img/icone-coracao.png" alt="" />
+    <div id="dropdown">
+      <img id="coracao" src="img/icone-coracao.png" alt="" onmouseenter="mostrarListaDeDesejos()" />
+      <div id='dropdown-content'> </div>
+    </div>
     <img id="usuario" src="img/icone-usuario.png" alt="" onclick="login()" />
   </div>
       <div id="icone-logo">
