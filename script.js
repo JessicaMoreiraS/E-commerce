@@ -1,6 +1,7 @@
 var regioesBrasil = [["Norte", "AM"], ["Norte", "RR"], ["Norte", "AP"], ["Norte", "PA"], ["Norte", "TO"], ["Norte", "RO"], ["Norte", "AC"], ["Nordeste", "MA"], ["Nordeste", "PI"], ["Nordeste", "CE"], ["Nordeste", "RN"], ["Nordeste", "PE"], ["Nordeste", "PB"], ["Nordeste", "SE"], ["Nordeste", "AL"], ["Nordeste", "BA"], ["Centro-Oeste", "MT"], ["Centro-Oeste", "DF"], ["Centro-Oeste", "MS"], ["Centro-Oeste", "GO"], ["Sudeste", "SP"], ["Sudeste", "RJ"], ["Sudeste", "ES"], ["Sudeste", "MG"], ["Sul", "PR"], ["Sul", "RS"], ["Sul", "SC"]]
 
 var novoComentario = []
+var listaGlobal
 
 index()
 function index(){
@@ -14,21 +15,60 @@ function index(){
 }
 
 function selecionaProd(nProd){
-    document.getElementById("main").innerHTML = '<div id="container-produto"><div id="foto-produto"><div id="espaco-fotos"><div class="caixa"></div><div class="caixa"></div><div class="caixa"></div><div class="caixa"></div><div class="caixa"></div></div><!--<img id="vestido_verde" src="img/vestido-verde.png" alt="" />--></div><div id="detalhes-produto"><h1 id="titulo-produto"></h1><h3 id="titulo-preco"></h3><!-- <div> Ícones feitos por <a href="https://www.flaticon.com/br/autores/smashicons" title="Smashicons"> Smashicons </a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com"</a></div> --><div id="alinhar-estrelas"></div><p id="titulo-avaliacao"></p><div id="produtos-semelhantes"><button id="botao-semelhantes">MODELOS SEMELHANTES <img id="seta-btn" src="img/seta-btn.png" alt="" /></button></div></div></div><!--Frete--><div id="alinhar-produtos"><div id="funcao-frete"><label id="txt-frete" for="">CALCULE O FRETE:</label><div id="frete"><input type="number" id="cep" placeholder="CEP"><button id="btn-frete" onclick="calcularFrete()">CALCULAR</button><div id="valorFrete"></div></div></div><div id="funcao-compra"><div id="funcao-quantidade"><p>QUANTIDADE</p><button id="btn-menos" onclick="diminuiQuantCompra()"><img id="menos" src="img/menos.png" alt="" /></button><input type="number" id="quantProd" value="1" readonly><button onclick="aumentaQuantCompra()"id="btn-mais"><img id="mais" src="img/mais.png" alt="" /></button></div><div id="comprar"><button id="btn-compra">COMPRAR</button><button id="btn-coracao" onclick="favoritar()"><img id="coracaoo" src="img/coracao-vazio.png"></button></div></div></div><div class="linha"></div>'
+    //Metodo fetch() para buscar o arquivo produtos.json transformando o resultado em um objeto usando o metodo response.json()
+    fetch('produtos.json')
+    .then(response => response.json())
+    .then(corpo => { 
+        /*console.log(corpo.posicao.numero)*/
+        document.title = "produtos";
+        var todosProds = [corpo.vestido1, corpo.vestido2, corpo.vestido3, corpo.vestido4, corpo.modelo1, corpo.modelo2, corpo.modelo3, corpo.saia1, corpo.saia2, corpo.saia3]   
+        listaGlobal = todosProds
+
+    document.getElementById("main").innerHTML = '<div id="container-produto"><div id="foto-produto"><div id="espaco-fotos"><div class="caixa"></div><div class="caixa"></div><div class="caixa"></div><div class="caixa"></div><div class="caixa"></div></div><!--<img id="vestido_verde" src="img/vestido-verde.png" alt="" />--></div><div id="detalhes-produto"><h1 id="titulo-produto"></h1><h3 id="titulo-preco"></h3><!-- <div> Ícones feitos por <a href="https://www.flaticon.com/br/autores/smashicons" title="Smashicons"> Smashicons </a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com"</a></div> --><div id="alinhar-estrelas"></div><p id="titulo-avaliacao"></p><div id="produtos-semelhantes"><button id="botao-semelhantes">MODELOS SEMELHANTES <img id="seta-btn" src="img/seta-btn.png" alt="" /></button></div></div></div><!--Frete--><div id="alinhar-produtos"><div id="funcao-frete"><label id="txt-frete" for="">CALCULE O FRETE:</label><div id="frete"><input type="number" id="cep" placeholder="CEP"><button id="btn-frete" onclick="calcularFrete()">CALCULAR</button><div id="valorFrete"></div></div></div><div id="funcao-compra"><div id="funcao-quantidade"><p>QUANTIDADE</p><button id="btn-menos" onclick="diminuiQuantCompra()"><img id="menos" src="img/menos.png" alt="" /></button><input type="number" id="quantProd" value="1" readonly><button onclick="aumentaQuantCompra()"id="btn-mais"><img id="mais" src="img/mais.png" alt="" /></button></div><div id="comprar"><button id="btn-compra">COMPRAR</button><button id="btn-coracao" onclick="favoritar('+nProd+')"><img id="coracaoo" src="img/coracao-vazio.png"></button></div></div></div><div class="linha"></div>'
 
     document.getElementById("main").innerHTML += '<div class="alinhar-txt" id="texto-produtos-limitados"><h4>OUTROS PRODUTOS</h4></div><div id="outros-produtos"><div id="seta-esquerda"><img src="img/esquerda.png" alt=""/></div><div id="img-1"><p id="txt-outros-produtos">SAIA VERDE COM PREGAS</p><img id="saia-verde" src="img/saia-verde.png" alt=""  onclick="selecionaProd(7)"/><p class="preco" id="areaPrecoS1">'+'</p></div><div id="img-2"><p id="txt-outros-produtos">SAIA COM BRILHO AZUL</p><img id="saia-azul" src="img/saia-azul.png" alt="" onclick="selecionaProd(8)"/><p class="preco" id="areaPrecoS2">'+'</p></div><div id="img-3"><p id="txt-outros-produtos">VESTIDO LILÁS COM BOTÕES</p><img id="roxo-vestido" src="img/roxo-vestido.jpg" alt="" onclick="selecionaProd(3)"/><p class="preco" id="areaPrecoV4">'+'</p></div><div id="img-4"><p id="txt-outros-produtos">SAIA LONGA ROSA</p><img id="saia-rosa" src="img/saia-rosa.png" alt="" onclick="selecionaProd(9)"/><p class="preco" id="areaPrecoS3">'+'</p></div><div id="seta-direita"><img src="img/direita.png" alt="" /></div></div>'
 
     document.getElementById("main").innerHTML += '<div id="avaliacao"><div id="titulo-avaliacao"><h4 id="avaliacao">AVALIAÇÕES</h4></div></div><div id="titulo-comentarios"><img id="icone-avaliacao" src="img/icone-avaliacao.png" alt="" /><h5>TODOS OS COMENTÁRIOS</h5></div><div class="linhaa"></div><div id="central"><div id="caixa-comentarios">'+'<div id="nomeUser"><div id="comentarioBox"></div>'+'<div id="funcoes-comentario"><button id="btn-comentar" onclick="novoComentar('+nProd+')"><img id="icon-escrever" src="img/escrever.png" alt="" /></button><button id="btn-comentarios"><img id="icon-seta-btn" src="img/seta-btn.png" alt="" /></button></div></div></div></div></div>'
 
-    dados(nProd)
-    fetch('produtos.json')
-    .then(response => response.json())
-    .then(corpo => { 
+    document.getElementById("titulo-produto").innerHTML += "<h2>"+todosProds[nProd].name+"</h2>";
+        document.getElementById("foto-produto").innerHTML += todosProds[nProd].image;
+        document.getElementById("titulo-preco").innerHTML += "US$"+todosProds[nProd].price; 
+
+        document.getElementById("main").innerHTML += ''
+
+        //atualizando comentarios
+        if(novoComentario.length>0){
+            for(w=0; w<novoComentario.length; w++){
+                numeroProd = novoComentario[w][0]
+                todosProds[numeroProd].comentarios.nomes.push(novoComentario[w][1])
+                todosProds[numeroProd].comentarios.estrelas.push(novoComentario[w][2])
+                todosProds[numeroProd].comentarios.textos.push(novoComentario[w][3])
+                console.log(todosProds[nProd].comentarios.textos[todosProds[nProd].comentarios.nomes.length-1])
+            }
+        }
+        //soma todas as estrelas
+        var totalPontosEstrelas=0
+        for(y=0; y<todosProds[nProd].comentarios.estrelas.length; y++){
+            totalPontosEstrelas += parseInt(todosProds[nProd].comentarios.estrelas[y])
+        }
+        todosProds[nProd].avaliacao = totalPontosEstrelas/todosProds[nProd].comentarios.estrelas.length
+        console.log("total estrelas"+todosProds[nProd].avaliacao)
+
+        converte(todosProds[nProd].price)
+        avaliacao(todosProds[nProd].avaliacao)
+        mostrarComentarios(todosProds, nProd)
+
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        })
+
     dollarSelecionaProd(corpo.saia1.price, corpo.saia2.price, corpo.saia3.price, corpo.vestido4.price)})
 }
 
-const usuario1 = {"nome":"maria", "email":"maria@gmail.com", "senha":"1234"}
-const usuario2 = {"nome":"Carla", "email":"carla@gmail.com", "senha":"4321"}
+const usuario1 = {"nome":"maria", "email":"maria@gmail.com", "senha":"1234", "favoritos":[]}
+const usuario2 = {"nome":"Carla", "email":"carla@gmail.com", "senha":"4321", "favoritos":[]}
 var usuarios = [usuario1, usuario2]
 var usuarioTentandoSeConectar;
 var usuarioConectado;
@@ -205,51 +245,6 @@ function mostrarComentarios(vetor, nProduto){
     }    
 }
 
-function dados(x){
-//Metodo fetch() para buscar o arquivo produtos.json transformando o resultado em um objeto usando o metodo response.json()
-console.log(x)
-    fetch('produtos.json')
-    .then(response => response.json())
-    .then(corpo => { 
-        /*console.log(corpo.posicao.numero)*/
-        document.title = "produtos";
-        var todosProds = [corpo.vestido1, corpo.vestido2, corpo.vestido3, corpo.vestido4, corpo.modelo1, corpo.modelo2, corpo.modelo3, corpo.saia1, corpo.saia2, corpo.saia3]
-
-        document.getElementById("titulo-produto").innerHTML += "<h2>"+todosProds[x].name+"</h2>";
-        document.getElementById("foto-produto").innerHTML += todosProds[x].image;
-        document.getElementById("titulo-preco").innerHTML += "US$"+todosProds[x].price; 
-
-        document.getElementById("main").innerHTML += ''
-
-        //atualizando comentarios
-        if(novoComentario.length>0){
-            for(w=0; w<novoComentario.length; w++){
-                numeroProd = novoComentario[w][0]
-                todosProds[numeroProd].comentarios.nomes.push(novoComentario[w][1])
-                todosProds[numeroProd].comentarios.estrelas.push(novoComentario[w][2])
-                todosProds[numeroProd].comentarios.textos.push(novoComentario[w][3])
-                console.log(todosProds[x].comentarios.textos[todosProds[x].comentarios.nomes.length-1])
-            }
-        }
-        //soma todas as estrelas
-        var totalPontosEstrelas=0
-        for(y=0; y<todosProds[x].comentarios.estrelas.length; y++){
-            totalPontosEstrelas += parseInt(todosProds[x].comentarios.estrelas[y])
-        }
-        todosProds[x].avaliacao = totalPontosEstrelas/todosProds[x].comentarios.estrelas.length
-        console.log("total estrelas"+todosProds[x].avaliacao)
-
-        converte(todosProds[x].price)
-        avaliacao(todosProds[x].avaliacao)
-        mostrarComentarios(todosProds, x)
-
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "smooth"
-        })
-    })
-}
 
 //CEP
 function calcularFrete(){
@@ -368,21 +363,56 @@ function diminuiQuantCompra(){
     document.getElementById("quantProd").value = quantProd
 }
 
-//function selecionaProd(a){
-    //produtos(a)
-   //window.location='produto.html'   //redirecionamento
-//}
-
-/*fetch('produtos.json')
-.then(response => response.json())
-.then(corpo => {
-    dados(corpo.posicao.numero)
-})*/
-
 // FAVORITAR UM PRODUTO
+function favoritar(nProd){
+    if(usuarioConectado == null || usuarioConectado == ""){
+        swal("Efetue seu login para favoritar esse produto")
+        return;
+    }
+    for(x=0; x<usuarioConectado.favoritos.length; x++){
+        if(usuarioConectado.favoritos[x] == nProd){
+            swal("esse itam já está em sua lista de desejo",{
+            buttons: {
+                Mantem: true,
+                Excluir: true,
+              },}
+            ).then((valor) => {console.log(valor)
+                if(valor == "Mantem"){
+                    return;
+                }else{
+                    usuarioConectado.favoritos[x] = null
+                    return;
+                }
+            })
+            return; 
+        }
+    }
+    usuarioConectado.favoritos.push(nProd);
+    console.log("produtos favoritos: "+ usuarioConectado.favoritos)
+}
 
+function mostrarListaDeDesejos(){
+    if(usuarioConectado == null || usuarioConectado == ""){
+        // swal("Efetue seu login para ver sua lista de desejos")
+        return;
+    }
+    document.getElementById('dropdown-content').innerHTML =""
+    if(usuarioConectado.favoritos.length>0){
+        for(x=0; x<usuarioConectado.favoritos.length; x++){
+            if(usuarioConectado.favoritos[x] != null && usuarioConectado.favoritos[x] != ""){
+                //droppdown para mostrar itens da lista
+                document.getElementById('dropdown-content').innerHTML += "<a onclick='selecionaProd("+usuarioConectado.favoritos[x]+")'>"+listaGlobal[usuarioConectado.favoritos[x]].name+"</a>"      
+            }    
+        }
+    }
+    // else{
+    //     swal("sua lista ainda está vazia")
+    // }
+}
+
+
+//window.location='produto.html'   //redirecionamento
 
 // if (window.open && posicao != -1) { // Window.opener/open recebe os dados da página que gerou a atual
-//     console.log("open")
-//     //dados(2)
-// } 
+//     console.log("open")}
+
