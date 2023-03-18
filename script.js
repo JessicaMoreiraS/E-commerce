@@ -66,11 +66,43 @@ function selecionaProd(nProd){
     dollarSelecionaProd(corpo.saia1.price, corpo.saia2.price, corpo.saia3.price, corpo.vestido4.price)})
 }
 
-const usuario1 = {"nome":"maria", "email":"maria@gmail.com", "senha":"1234", "favoritos":[]}
+const usuario1 = {"nome":"Maria", "email":"maria@gmail.com", "senha":"1234", "favoritos":[]}
 const usuario2 = {"nome":"Carla", "email":"carla@gmail.com", "senha":"4321", "favoritos":[]}
 var usuarios = [usuario1, usuario2]
 var usuarioTentandoSeConectar;
 var usuarioConectado;
+
+function opcaoLogin(){
+    if(usuarioConectado == null || usuarioConectado == ""){
+        document.getElementById('dropdown-content-login').innerHTML = "<a onclick='login()'>Faça Login</a>"      
+        document.getElementById('dropdown-content-login').innerHTML += "<a onclick='mainCadastrar()'>Cadastre-se</a>"      
+        return;
+    }else{
+        //mostrar nome do usuario e opcao de logout
+        document.getElementById('dropdown-content-login').innerHTML = "<p>Olá "+usuarioConectado.nome+"</p>"      
+        document.getElementById('dropdown-content-login').innerHTML += "<a onclick='logout()'>Logout</a>"      
+    }
+}
+
+function cadastrar(){  
+    //verificar se já existe conta com o email informado
+    for(x=0; x<usuarios.length; x++){
+        if(usuarios[x].email == document.getElementById("email")){
+            swal("ops, esse email já está cadastrado")
+            return;
+        }
+    }
+    var usuario = new Object
+    usuario.nome = document.getElementById("nome")
+    usuario.email = document.getElementById("email")
+    usuario.senha = document.getElementById("senha")
+
+    var jsonForm = JSON.stringify(usuario.valueOf());
+    const usuarioCadastrado = JSON.parse(jsonForm);
+
+    usuarios.push(usuarioCadastrado);
+    index();
+}
 
 function login(){
     var senhaCorreta;
@@ -114,6 +146,26 @@ function verificaSenha(userSenha, senhaCorreta, usuario){
         console.log(usuarioConectado)
     } else{
         swal("senha incorreta. Login não realizado")
+    }
+}
+
+function logout(){
+    if(usuarioConectado != "" && usuarioConectado != null){
+        swal("Tem ceteza de que deseja sair?",{
+            buttons: {
+                Continuar: true,
+                Sair: true,
+              },
+            }
+        ).then((valor) => {
+            if(valor == "Sair"){
+                usuarioConectado = null
+                swal("Volte sempre!")
+                return;
+            }else{
+                return;
+            }
+        })
     }
 }
 
@@ -366,7 +418,7 @@ function favoritar(nProd){
         if(usuarioConectado.favoritos[x] == nProd){
             swal("esse itam já está em sua lista de desejo",{
             buttons: {
-                Mantem: true,
+                Manter: true,
                 Excluir: true,
               },}
             ).then((valor) => {
@@ -389,6 +441,7 @@ function favoritar(nProd){
 function mostrarListaDeDesejos(){
     if(usuarioConectado == null || usuarioConectado == ""){
         // swal("Efetue seu login para ver sua lista de desejos")
+        document.getElementById('dropdown-content').innerHTML = null
         return;
     }
     document.getElementById('dropdown-content').innerHTML =""
