@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500&display=swap" rel="stylesheet">
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
@@ -21,10 +22,13 @@
         <div id="icones-esquerda">
             <img id="voltar" src="img/icon-voltar.png" alt="" onclick="index()">
             <div id="dropdown">
-            <img id="coracao" src="img/icone-coracao.png" alt="" onmouseenter="mostrarListaDeDesejos()" />
-            <div id='dropdown-content'> </div>
+                <img id="coracao" src="img/icone-coracao.png" alt="" onmouseenter="mostrarListaDeDesejos()" />
+                <div id='dropdown-content'> </div>
             </div>
-            <img id="usuario" src="img/icone-usuario.png" alt="" onclick="login()" />
+            <div id="dropdown-login">
+                <img id="usuario" src="img/icone-usuario.png" alt="" onmouseenter="opcaoLogin()" /><!--onclick="login()"-->
+                <div id='dropdown-content-login'> </div>
+            </div>
         </div>
         <div id="icone-logo">
             <img id="logo" src="img/flor-logo.png" alt="" />
