@@ -423,7 +423,7 @@ function favoritar(nProd){
               },}
             ).then((valor) => {
                 if(valor == "Excluir"){
-                    usuarioConectado.favoritos[x] = null
+                    usuarioConectado.favoritos.splice(x, 1)
                     return;
                 }else{
                     return;
@@ -447,10 +447,8 @@ function mostrarListaDeDesejos(){
     document.getElementById('dropdown-content').innerHTML =""
     if(usuarioConectado.favoritos.length>0){
         for(x=0; x<usuarioConectado.favoritos.length; x++){
-            if(usuarioConectado.favoritos[x] != null && usuarioConectado.favoritos[x] != ""){
-                //droppdown para mostrar itens da lista
-                document.getElementById('dropdown-content').innerHTML += "<a onclick='selecionaProd("+usuarioConectado.favoritos[x]+")'>"+listaGlobal[usuarioConectado.favoritos[x]].name+"</a>"      
-            }    
+            //droppdown para mostrar itens da lista
+            document.getElementById('dropdown-content').innerHTML += "<a onclick='selecionaProd("+usuarioConectado.favoritos[x]+")'>"+listaGlobal[usuarioConectado.favoritos[x]].name+"</a>"         
         }
     }
 }
