@@ -459,3 +459,22 @@ function mostrarListaDeDesejos(){
 // if (window.open && posicao != -1) { // Window.opener/open recebe os dados da página que gerou a atual
 //     console.log("open")}
 
+
+// Jéssica, pode tentar arrumar o tamanho do input que criei pra quando clicar no buscar e também posicionar ele certo? Já deixei o ícone de pequisa do cabeçalho como botão
+
+// function buscar(){
+//     var elemento_pai = document.getElementById("icones-direita");
+
+//     // Criar o input ao clicar no elemento de busca
+//     var titulo = document.createElement('input');
+
+    
+//     // Criar texto apenas para constar a criação
+//     var texto = document.createTextNode("");
+    
+//     // Anexar o nó de texto ao elemento input
+//     titulo.appendChild(texto);
+    
+//     // Inserir (anexar) o elemento filho (titulo) ao elemento pai (header)
+//     elemento_pai.appendChild(titulo);
+// }
