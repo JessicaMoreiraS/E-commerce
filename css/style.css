@@ -15,7 +15,7 @@ header {
   height: 90px;
   position: fixed;
   top: 0;
-  width: 97%;
+  width: 100%;
   z-index: 999px;
 }
 
@@ -23,6 +23,10 @@ img {
   border-radius: 1%;
   /* box-shadow: 1px 5px 9px #0f0f0f80; */
   cursor: pointer;
+}
+
+#a{
+  display: none;
 }
 
 #coracao,
@@ -35,8 +39,15 @@ img {
   transition: 400ms;
 }
 
-#carrinho, #usuario{
+#carrinho{
   margin-top: 14%;
+  width: 44px;
+  height: 50px;
+  transition: 400ms;
+}
+
+#usuario{
+  margin-top: 8%;
   width: 44px;
   height: 50px;
   transition: 400ms;
@@ -56,17 +67,140 @@ img {
 
 
 #logo {
+  margin-top: 5%;
   width: 70px;
+  height: 70px;
   box-shadow: none;
 }
 
+#logo-footer{
+  width: 110px;
+  height: 100px;
+  
+}
+
 #txt{
-  margin-left: -10%;
+  margin-left: -9%;
   margin-top: 16%;
   font-family: 'Lobster', sans-serif;
   font-weight: bold;
 }
 
+/*Alterações pertencentes ao footer*/
+
+.txt{
+  font-family: 'Lobster', sans-serif;
+  font-weight: bold;
+  font-size: 160%;
+  margin-left: -25px;
+  margin-top: 40px;
+}
+
+#espaco-logo{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding-top: 5%;
+}
+
+#instagram, #twitter, #facebook{
+  width: 35px;
+  height: 35px;
+}
+
+#icones{
+  padding-top: 10%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 15%;
+}
+
+#nome-logo{
+  padding-top: 8%
+}
+
+#txt-arroba{
+  text-align: center;
+  font-style: italic;
+}
+
+#alinhar-footer{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+#informacoes{
+  margin-left: 6%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2%;
+}
+
+.txt-inf{
+  cursor: pointer;
+  font-weight: none;
+}
+
+.txt-inf:hover{
+  color: #4f694c;
+  text-shadow: 1px 1px 9px #8b5c9e73;
+}
+
+#direitos-reservados{
+  padding-top: 3%;
+  text-align: center;
+  margin-left: 5%;
+  font-weight: none;
+  font-size: 120%;
+}
+
+.linhaaa{
+  padding-top: 5%;
+  border-bottom: 1px solid #141414;
+  margin: 0 auto;
+  width: 60%;
+}
+
+#flor-footer{
+  width: 20%;
+  position: absolute;
+  margin-top: -6%;
+}
+
+#new{
+  width: 50%;
+  margin-top: -180px
+}
+
+footer{
+  width: 100%;
+}
+
+
+#a{
+  margin-top: 5%;
+  display: none;
+}
+
+.navbar-inverse{
+  background-color: #c4b4ca;
+  border-radius: 5px;
+}
+
+.navbar-inverse .navbar-nav>li>a{
+  font-family: "Barlow Condensed", sans-serif; ;
+  font-weight: bold;
+  color: #000;
+}
+
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header{
+  margin-left: 0px;
+}
+
+/*___________________________*/
 
 h2{
   font-family: "Barlow Condensed", sans-serif;
@@ -77,11 +211,15 @@ h2{
 }
 
 h1 {
+  margin-top: 5%;
   font-family: "Barlow Condensed", sans-serif;
   font-weight: bold;
   font-size: 440%;
   margin-left: 10%;
+  color: #000;
 }
+
+
 
 h3 {
   font-family: "Barlow Condensed", sans-serif;
@@ -89,13 +227,16 @@ h3 {
   font-size: 220%;
   font-style: italic;
   margin-left: 10%;
+  color: #000;
 }
 
 #alinhar-titulos {
   margin-top: 13%;
-  background-color: #cbdbec;
+  background: rgb(215,232,250);
+  background: linear-gradient(90deg, rgba(215,232,250,1) 14%, rgba(211,229,247,1) 52%, rgba(198,220,245,1) 76%);
   display: flex;
   flex-direction: column;
+  box-shadow: 1px 3px 9px #6b68685d;
 }
 
 #icone-logo {
@@ -130,6 +271,10 @@ h3 {
   width: 40px;
   height: 50px;
   box-shadow: none;
+}
+
+#txt-1, #txt-2, #txt-3, #txt-4, #txt-5, #txt-6{
+  margin-top: 6%;
 }
 
 p {
@@ -195,11 +340,14 @@ p {
 #modelo-1,
 #modelo-2,
 #modelo-3 {
-  width: 300px;
+  width: 280px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   transition: transform .5s;
+  background-color: #e6eaeb;
+  padding: 1%;
+  border-radius: 10px;
 }
 
 #modelo-1:hover,
@@ -220,15 +368,14 @@ p {
 
 #modelo-dois,
 #modelo-tres {
-  margin-top: 30%;
   max-width: 100%;
   height: 85%;
 }
 
 #modelo-um{
-  margin-top: 29%;
+  margin-top: 1%;
   width: 100%;
-  height: 73%;
+  height: 85%;
 }
 
 #produtos-modelos {
@@ -242,6 +389,7 @@ p {
 .precos {
   font-size: 160%;
   margin-left: 1%;
+  padding-top: 6%;
   text-decoration: none;
   color: #000;
 }
@@ -261,12 +409,12 @@ p {
 
 #vestido-rosa,
 #vestido-verde {
-  width: 280px;
+  width: 240px;
 }
 
 #vestido-roxo {
-  width: 300px;
-  height: 420px;
+  width: 250px;
+  height: 360px;
 
 }
 
@@ -278,6 +426,9 @@ p {
   flex-direction: column;
   height: 100%;
   transition: transform .5s;
+  background-color: #e6eaeb;
+  padding: 1%;
+  border-radius: 10px;
 }
 
 #vestido-1:hover,
@@ -307,10 +458,13 @@ p {
 }
 
 h4 {
+  padding-top: 5%;
+  padding-bottom: 5%;
   font-size: 350%;
   font-family: "Barlow Condensed", sans-serif;
   font-weight: bold;
   text-align: center;
+  color: #000;
 }
 
 .icon-direita,
@@ -322,21 +476,41 @@ h4 {
 footer {
   margin-top: 10%;
   background-image: url("../img/footer.jpg");
-  height: 300px;
+  height: 450px;
 }
 
+#container-subtitulo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+
 @media screen and (max-width: 830px) {
+  #a{
+    display: block;
+  }
+  #icone-logo{
+    margin-left: -300px;
+  }
   #categoria-1,
   #categoria-2 {
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
+  #coracao, #usuario, #carrinho, #voltar, #pesquisa{
+    display: none;
+  }
   #categorias {
     margin-top: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .icon-esquerda, .icon-direita{
+    width: 80%;
   }
   #chapeus,
   #bolsas,
@@ -361,6 +535,57 @@ footer {
   .linha{
     margin-top: 40%;
   }
+  #espaco-logo{
+    padding-top: 2%;
+  }
+  #alinhar-footer{
+    flex-direction: column;
+   }
+   .txt{
+    margin-left: 0;
+   }
+
+   #modelo-tres, #modelo-um, #modelo-dois{
+    padding-left: 10%;
+    max-width: 90%;
+   }
+   #informacoes{
+    padding-top: 0px;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 0;
+   }
+   #direitos-reservados{
+    padding-top: 1%;
+    margin-left: 0;
+   }
+   footer{
+    height: 560px;
+   }
+   #nome-logo{
+    display: none;
+   }
+   #icones{
+    padding-top: 8%;
+    gap: 5%;
+   }
+   .txt{
+    margin-left: -4%;
+   }
+   #logo-footer{
+    margin-left: -8%;
+   }
+   .linhaaa{
+    display: none;
+   }
+   #flor-footer{
+    width: 40%;
+    margin-top: -150px;
+   }
+   #new{
+    display: none;
+  }
+
 }
 
 @media screen and (max-width: 1200px) {
@@ -373,6 +598,12 @@ footer {
     }
     
 }
+
+
+
+
+
+/*-------------- Página de produtos ----------- */
 
 
 #container-produto{
@@ -658,6 +889,8 @@ h5{
   align-items: center;
   gap: 2%;
   margin-left: 15%;
+  margin-top: 10%;
+  margin-bottom: 3%;
 }
 
 #titulo-avaliacao{
@@ -688,21 +921,10 @@ h5{
 }
 
 #comentarioBox{
+  padding-top: 20px;
   width: 450px;
 }
 
-/* 
-#divNome{
-  display: flex;
-  justify-content: left;
-  flex-direction: column;
-}
-
-#comentarioBox{
-  display: flex;
-  justify-content: left;
-  flex-direction: row;
-} */
 
 #nota{
   display: flex;
@@ -761,7 +983,7 @@ h5{
     width: 100%;
   }
   #vestido_verde{
-    width: 290px;
+    max-width: 290px;
     height: 350px;
     margin-top: 25%;
   }
@@ -779,6 +1001,9 @@ h5{
   #funcao-frete{
     margin-top: 5%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
   #funcao-compra{
     width: 100%;
@@ -788,9 +1013,12 @@ h5{
     flex-direction: column;
   }
   #funcao-quantidade, #comprar{
+    margin-left: 0px;
     gap: 10%;
   }
   #funcao-quantidade{
+    padding-top: 6%;
+    padding-bottom: 5%;
     margin-right: 13%;
   }
   #img-1, #img-2, #img-4{
@@ -799,11 +1027,14 @@ h5{
   #img-3{
     margin-left: 20%;
   }
-  #txt-frete{
-    text-align: center;
-  }
   #frete{
-    margin-right: 15%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    margin-left: 0px;
   }
   .estrela{
     width: 45px;
@@ -811,16 +1042,52 @@ h5{
   }
   #valorFrete, #cep{
     font-size: 100%;
+    width: 150px;
+    margin-bottom: 15%;
+  }
+  #botao-semelhantes{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 0px;
+    width: 180px;
   }
   #avaliacao{
     margin-left: 0;
   }
-  #caixaComentarios{
-    width: 20%;
+  #comentarioBox{
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 50%;
+  }
+  #caixa-comentarios{
+    width: 50%;
+  }
+  #container-produto{
+    width: 100%;
+  }
+  #espaco-fotos{
+    display: none;
+  }
+  #txt-frete{
+    margin-left: 0;
+    text-align: center;
+  }
+  #foto-produto{
+    display: flex;
+    justify-content: center;
+  }
+  #alinhar-estrelas, #titulo-preco{
+    margin-left: 0px;
+  }
+  #titulo-avaliacao{
+    margin-left: 0px;
+    padding-top: 6%;
+    padding-bottom: 6%;
   }
 }
 
 /*--------------------Fingindo que sei o que to fazendo----------------*/
+
 #dropdown, #dropdown-login{
   margin-top: 10%; /*gambiarra aqui*/
   position: relative;
@@ -850,3 +1117,6 @@ h5{
 
 #dropdown:hover #dropdown-content, #dropdown-login:hover #dropdown-content-login {display: block;}
 
+p{
+  color: #000;
+}
