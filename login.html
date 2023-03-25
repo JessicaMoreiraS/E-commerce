@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500&display=swap"
+          rel="stylesheet"
+        />
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- adds jQuery libraries -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <!-- adds ajax and bootstrap libraries -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- adds bootstrap libraries -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+        />
+    
+        <link rel="icon" type="imagem/png" href="img/flor-logo.png" />
+        <link rel="stylesheet" href="css/style.css" />
+    <title>Entrar</title>
+</head>
+<body>
+    <!-- <div> Ícones feitos por <a href="https://www.flaticon.com/br/autores/catalin-fertu" title="Catalin Fertu"> Catalin Fertu </a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com'</a></div> -->
+    <header>
+        <!-- Menu Hamburger-->
+        <div id="a">
+          <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed"data-toggle="collapse" data-target="#menu">
+                  <span class="icon-bar"><img src="" alt=""></span> <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+              <div class="collapse navbar-collapse" id="menu">
+                <ul class="nav navbar-nav" id="a-nav">
+                  <li><a href="login.html">Login</a></li>
+                  <li><a href="cadastro.html">Cadastre-se</a></li>
+                  <li><a href="">Favoritos</a></li>
+                  <li><a href="">Carrinho</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+        <!-- Cabeçalho padrão vísivel em desktop -->
+        <div id="icones-esquerda">
+          <img id="voltar" src="img/icon-voltar.png" alt="" onclick="index()" />
+          <div id="dropdown">
+            <img
+              id="coracao"
+              src="img/icone-coracao.png"
+              alt=""
+              onmouseenter="mostrarListaDeDesejos()"
+            />
+            <div id="dropdown-content"></div>
+          </div>
+          <div id="dropdown-login">
+            <img
+              id="usuario"
+              src="img/icone-usuario.png"
+              alt=""
+              onmouseenter="opcaoLogin()"
+            /><!--onclick="login()"-->
+            <div id="dropdown-content-login"></div>
+          </div>
+        </div>
+        <div id="icone-logo">
+          <img id="logo" src="img/flor-logo.png" alt="" />
+          <p id="txt">nowvintage</p>
+        </div>
+        <div id="icones-direita">
+          <img id="pesquisa" src="img/icone-pesquisa.png" alt="" />
+          <img id="carrinho" src="img/icone-carrinho.png" alt="" />
+        </div>
+      </header>
+
+      <!-- Contéudo -->
+      <main>
+        <div class="centraliza">
+            <div id="caixa-login">
+                <h5 class="alinhar-txt">Login</h5>
+                <h6>Efetue o login para continuar</h6>
+                <form action="">
+                <div class="inpt-1">
+                        <label for="">E-mail:</label>
+                        <input class="inputt" type="text">
+                    </div>
+                    <div class="inpt-2">
+                        <label for="">Senha:</label>
+                        <input class="inputt" type="password">
+                    </div>
+                    <div class="align">
+                        <a href="cadastro.html">
+                            <p class="texto-abaixo">Não tem conta? Cadastre-se!</p>
+                        </a>
+                        <button class="btn-login" type="submit">Entrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+      </main>
+
+
+
+
+
+
+
+
+
+
+      <!-- Rodapé do site -->
+      <footer>
+        <div id="alinhar-footer">
+          <div id="icones">
+            <img id="instagram" src="img/instagram.png" alt="" />
+            <img id="twitter" src="img/twitter.png" alt="" />
+            <img id="facebook" src="img/facebook.png" alt="" />
+          </div>
+          <div id="espaco-logo">
+            <img id="logo-footer" src="img/flor-logo.png" alt="" />
+            <p class="txt">nowvintage</p>
+          </div>
+          <div id="nome-logo">
+            <p id="txt-arroba">@nowvintage</p>
+          </div>
+        </div>
+        <div id="informacoes">
+          <p class="txt-inf">Sobre</p>
+          <p class="txt-inf">Contato</p>
+          <p class="txt-inf">Política de Privacidade</p>
+          <p class="txt-inf">Termos de Serviço</p>
+        </div>
+        <div id="alinha-flor">
+          <img id="flor-footer" src="img/folhas.png" alt="" />
+          <p id="direitos-reservados">© Direitos reservados à NowVintage</p>
+        </div>
+      </footer>
+
+      <script src="script.js"></script>
+
+</body>
+</html>
