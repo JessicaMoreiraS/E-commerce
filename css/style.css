@@ -357,7 +357,7 @@ p {
   flex-direction: column;
 }
 
-/* #modelo-1,
+#modelo-1,
 #modelo-2,
 #modelo-3 {
   width: 280px;
@@ -368,7 +368,7 @@ p {
   background-color: #e6eaeb;
   padding: 1%;
   border-radius: 10px;
-} */
+}
 
 #modelo-1:hover,
 #modelo-2:hover,
@@ -873,8 +873,14 @@ input{
   border: none;
 }
 
-#vestido_rosa, #vestido_roxo, #modelo_um, #modelo_dois, #modelo_tres, #saia_verde, #saia_azul, #saia_rosa{
-  width: 45%;
+#vestido_rosa, #vestido_roxo, #saia_verde, #saia_azul, #saia_rosa{
+  height: 70%;
+  margin-right: 5%;
+  margin-top: 15%;
+  border-radius: 7px;
+}
+
+#modelo_um, #modelo_dois, #modelo_tres, #modelo_quatro, #modelo_cinco, #modelo_seis, #modelo_sete, #modelo-oito, #modelo_nove{
   height: 70%;
   margin-right: 5%;
   margin-top: 15%;
@@ -1314,6 +1320,8 @@ swiper-container {
   width: 100%;
   height: 100%;
 }
+
+
 
 swiper-slide {
   text-align: center;
