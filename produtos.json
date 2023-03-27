@@ -88,24 +88,46 @@
         }
     },
     "modelo6":{
-        "name":"VESTIDO ROXO FLORES E SEDA",
+        "name":"VESTIDO 60'S ESCOTEIRA",
         "image": "<img id='modelo_seis' src='img/modelo-7.webp'>",
-        "price": 21.39,
+        "price": 13.39,
         "avaliacao": 5.0,
         "comentarios":{
-            "nomes":["Jamile", "Anny", "Esther", "Agnes"],
+            "nomes":["Tamires", "Jéssica", "Eliane", "Ane"],
             "estrelas": [5, 5, 5, 5],
-            "textos":["Adorável.", "Melhor ainda pessoalmente", "Chegou dentro do prazo.", "Amo os modelos de vocês!"]
+            "textos":["Adorável.", "Melhor ainda pessoalmente", "Confortável.", "Amo os modelos de vocês!"]
         }
     },
     "modelo7":{
-        "name":"VESTIDO 60'S ESCOTEIRA",
-        "image": "<img id='modelo_seis' src='img/modelo-8.webp'>",
+        "name":"VESTIDO AZUL PRINCESS",
+        "image": "<img id='modelo_sete' src='img/modelo-8.webp'>",
+        "price": 13.39,
+        "avaliacao": 5.0,
+        "comentarios":{
+            "nomes":["Tamires", "Jéssica", "Eliane", "Ane"],
+            "estrelas": [5, 5, 5, 5],
+            "textos":["Adorável.", "Melhor ainda pessoalmente", "Confortável.", "Amo os modelos de vocês!"]
+        }
+    },
+    "modelo8":{
+        "name":"VESTIDO VERDE FLORAL",
+        "image": "<img id='modelo_oito' src='img/modelo-9.webp'>",
         "price": 13.39,
         "avaliacao": 4.0,
         "comentarios":{
-            "nomes":["Tamires", "Amy", "Estella", "Ane"],
-            "estrelas": [5, 5, 4, 5],
+            "nomes":["Tamires", "Jéssica", "Eliane", "Ane"],
+            "estrelas": [5, 4, 5, 5],
+            "textos":["Adorável.", "Melhor ainda pessoalmente", "Confortável.", "Amo os modelos de vocês!"]
+        }
+    },
+    "modelo9":{
+        "name":"VESTIDO ROSE E WHITE FLORAL",
+        "image": "<img id='modelo_nove' src='img/modelo-10.webp'>",
+        "price": 18.39,
+        "avaliacao": 5.0,
+        "comentarios":{
+            "nomes":["Tamires", "Jéssica", "Eliane", "Ane"],
+            "estrelas": [5, 5, 5, 5],
             "textos":["Adorável.", "Melhor ainda pessoalmente", "Confortável.", "Amo os modelos de vocês!"]
         }
     },
