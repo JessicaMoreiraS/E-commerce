@@ -65,6 +65,50 @@
             "textos":["Adorável.", "Melhor ainda pessoalmente", "Chegou dentro do prazo.", "Amo os modelos de vocês!"]
         }
     },
+    "modelo4":{
+        "name":"VESTIDO SECRET WHITE",
+        "image": "<img id='modelo_quatro' src='img/modelo-5.webp'>",
+        "price": 15.49,
+        "avaliacao": 5.0,
+        "comentarios":{
+            "nomes":["Camille", "Julyana", "Evelin", "Jhenifer"],
+            "estrelas": [5, 5, 5, 5],
+            "textos":["Adorável.", "Melhor ainda pessoalmente", "Chegou dentro do prazo.", "Amo os modelos de vocês!"]
+        }
+    },
+    "modelo5":{
+        "name":"VESTIDO ROXO FLORES E SEDA",
+        "image": "<img id='modelo_cinco' src='img/modelo-6.webp'>",
+        "price": 19.49,
+        "avaliacao": 5.0,
+        "comentarios":{
+            "nomes":["Camile", "Janne", "Evenna", "Jenifer"],
+            "estrelas": [5, 5, 5, 5],
+            "textos":["Adorável.", "Melhor ainda pessoalmente", "Chegou dentro do prazo.", "Amo os modelos de vocês!"]
+        }
+    },
+    "modelo6":{
+        "name":"VESTIDO ROXO FLORES E SEDA",
+        "image": "<img id='modelo_seis' src='img/modelo-7.webp'>",
+        "price": 21.39,
+        "avaliacao": 5.0,
+        "comentarios":{
+            "nomes":["Jamile", "Anny", "Esther", "Agnes"],
+            "estrelas": [5, 5, 5, 5],
+            "textos":["Adorável.", "Melhor ainda pessoalmente", "Chegou dentro do prazo.", "Amo os modelos de vocês!"]
+        }
+    },
+    "modelo7":{
+        "name":"VESTIDO 60'S ESCOTEIRA",
+        "image": "<img id='modelo_seis' src='img/modelo-8.webp'>",
+        "price": 13.39,
+        "avaliacao": 4.0,
+        "comentarios":{
+            "nomes":["Tamires", "Amy", "Estella", "Ane"],
+            "estrelas": [5, 5, 4, 5],
+            "textos":["Adorável.", "Melhor ainda pessoalmente", "Confortável.", "Amo os modelos de vocês!"]
+        }
+    },
     "saia1":{
         "name":"SAIA VERDE COM PREGAS",
         "image": "<img id='saia_verde' src='img/saia-verde.png'>",
@@ -109,5 +153,4 @@
             "textos":["Chegou rápido", "Lindo e delicado", "Vestido perfeito!", "Comprei para o meu aniversário e foi um sucesso"]
         }
     }
-    
 }
