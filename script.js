@@ -108,6 +108,16 @@ function opcaoLogin(){
     }
 }
 
+function opcaoLoginMob(){
+    if(usuarioConectado == null || usuarioConectado == ""){
+        document.getElementById("loginOuOla").innerHTML = '<a onclick="mainLogin()">Login</a>';
+        document.getElementById("logoutOuCadastreSe").innerHTML = '<a onclick="mainCadastrar()">Cadastre-se</a>';
+    }else{
+        document.getElementById("loginOuOla").innerHTML = '<a>Olá '+usuarioConectado.nome+'</a>';
+        document.getElementById("logoutOuCadastreSe").innerHTML = '<a onclick="logout()">Logout</a>';
+    }
+}
+
 function cadastrar(){  
     //verificar se já existe conta com o email informado
     for(x=0; x<usuarios.length; x++){
@@ -462,6 +472,21 @@ function mostrarListaDeDesejos(){
         for(x=0; x<usuarioConectado.favoritos.length; x++){
             //droppdown para mostrar itens da lista
             document.getElementById('dropdown-content').innerHTML += "<a onclick='selecionaProd("+usuarioConectado.favoritos[x]+")'>"+listaGlobal[usuarioConectado.favoritos[x]].name+"</a>"         
+        }
+    }
+}
+
+function mostrarListaDeDesejosMob(){
+    if(usuarioConectado == null || usuarioConectado == ""){
+        // swal("Efetue seu login para ver sua lista de desejos")
+        document.getElementById("dropFavoritosMob").innerHTML = null
+        return;
+    }
+    document.getElementById("dropFavoritosMob").innerHTML =""
+    if(usuarioConectado.favoritos.length>0){
+        for(x=0; x<usuarioConectado.favoritos.length; x++){
+            //droppdown para mostrar itens da lista
+            document.getElementById("dropFavoritosMob").innerHTML += "<li onclick='selecionaProd("+usuarioConectado.favoritos[x]+")'>"+listaGlobal[usuarioConectado.favoritos[x]].name+"</li>"         
         }
     }
 }
