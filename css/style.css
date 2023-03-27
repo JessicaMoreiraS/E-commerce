@@ -769,7 +769,7 @@ footer {
 #quantProd{
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 110%;
-  padding: 2%;
+  text-align: center;
   background-color: transparent;
   box-shadow: none;
   width: 30px;
