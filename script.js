@@ -3,10 +3,12 @@ var regioesBrasil = [["Norte", "AM"], ["Norte", "RR"], ["Norte", "AP"], ["Norte"
 var novoComentario = []
 var listaGlobal
 
+/*           Main Paginas */
+
 index()
 function index(){
     document.title = "home";
-    document.getElementById("main").innerHTML = '<div id="alinhar-titulos"><div id="container-titulo"><h1>A ASCENSÃO DO<br />VINTAGE 60"S</h1></div><div id="container-subtitulo"><h3>OS MELHORES VESTIDOS DA ÉPOCA</h3><img id="new" src="img/flor-surge.png"></div></div>'+'<div id="categorias"><div id="categoria-1"><div id="oculos"><img id="icon-oculos" src="img/icon-oculos.png" alt="" /><p id="txt-1">ÓCULOS</p></div><div id="bolsas"><img id="icon-bolsa" src="img/icon-bolsa.png" alt="" /><p id="txt-2">BOLSAS</p></div><div id="chapeus"><img id="icon-chapeu" src="img/icon-boina.png" alt="" /><p id="txt-3">CHAPÉUS</p></div></div><div id="categoria-2"><div id="vestidos"><img id="icon-vestido" src="img/icon-vestido.png" alt="" /><p id="txt-4">VESTIDOS</p></div><div id="sapatos"><img id="icon-sapato" src="img/icon-sapato.png" alt="" /><p id="txt-5">SAPATOS</p></div><div id="joias"><img id="icon-joia" src="img/icon-joias.png" alt="" /><p id="txt-6">JOIAS</p></div></div></div><!-- PRODUTOS --><div id="produtos-modelos"><div class="seta-esquerda"><a href="produtos.html"><img class="icon-esquerda" src="img/esquerda.png" alt=""/></a></div><div id="modelo-1"><img id="modelo-um" src="img/modelo-1.png" alt="" onclick="selecionaProd(4)"/><p class="precos" id="areaPrecoM1">'+'</p></div><div id="modelo-2"><img id="modelo-dois" src="img/modelo-2.png" alt="" onclick="selecionaProd(5)"/><p class="precos" id="areaPrecoM2">'+'</p></div><div id="modelo-3"><img id="modelo-tres" src="img/modelo-3.png" alt="" onclick="selecionaProd(6)"/><p class="precos" id="areaPrecoM3">'+'</p></div><div class="seta-direita"><img class="icon-direita" src="img/direita.png" alt=""/></div></div><div class="linha"></div>'+'<!-- PRODUTOS LIMITADOS --><div id="texto-produtos-limitados"><h4>PRODUTOS LIMITADOS</h4></div><div id="produtos-limitados"><div class="seta-esquerda"><img class="icon-esquerda" src="img/esquerda.png" alt="" /></div><div id="vestido-1"><img id="vestido-rosa" src="img/vestido-rosa.png" alt="" onclick="selecionaProd(1)"/><p class="precos" id="areaPrecoV2">'+'</p></div><div id="vestido-2"><img id="vestido-verde" src="img/vestido-verde.png" alt="" onclick="selecionaProd(0)"/><p class="precos" id="areaPrecoV1">'+'</p></div><div id="vestido-3"><img id="vestido-roxo" src="img/vestid-roxo.png" alt="" onclick="selecionaProd(2)"/><p class="precos" id="areaPrecoV3">'+'</p></div><div class="seta-direita"><img class="icon-direita" src="img/direita.png" alt="" /> </div></div></main>'
+    document.getElementById("main").innerHTML = '<div id="alinhar-titulos"><div id="container-titulo"><h1>A ASCENSÃO DO<br />VINTAGE 60"S</h1></div><div id="container-subtitulo"><h3>OS MELHORES VESTIDOS DA ÉPOCA</h3><img id="new" src="img/flor-surge.png"></div></div>'+'<div id="categorias"><div id="categoria-1"><div id="oculos"><img id="icon-oculos" src="img/icon-oculos.png" alt="" /><p id="txt-1">ÓCULOS</p></div><div id="bolsas"><img id="icon-bolsa" src="img/icon-bolsa.png" alt="" /><p id="txt-2">BOLSAS</p></div><div id="chapeus"><img id="icon-chapeu" src="img/icon-boina.png" alt="" /><p id="txt-3">CHAPÉUS</p></div></div><div id="categoria-2"><div id="vestidos"><img id="icon-vestido" src="img/icon-vestido.png" alt="" /><p id="txt-4">VESTIDOS</p></div><div id="sapatos"><img id="icon-sapato" src="img/icon-sapato.png" alt="" /><p id="txt-5">SAPATOS</p></div><div id="joias"><img id="icon-joia" src="img/icon-joias.png" alt="" /><p id="txt-6">JOIAS</p></div></div></div><!-- PRODUTOS --><div id="produtos-modelos"><div class="seta-esquerda"><a><img class="icon-esquerda" src="img/esquerda.png" alt=""/></a></div><div id="modelo-1"><img id="modelo-um" src="img/modelo-1.png" alt="" onclick="selecionaProd(4)"/><p class="precos" id="areaPrecoM1">'+'</p></div><div id="modelo-2"><img id="modelo-dois" src="img/modelo-2.png" alt="" onclick="selecionaProd(5)"/><p class="precos" id="areaPrecoM2">'+'</p></div><div id="modelo-3"><img id="modelo-tres" src="img/modelo-3.png" alt="" onclick="selecionaProd(6)"/><p class="precos" id="areaPrecoM3">'+'</p></div><div class="seta-direita"><img class="icon-direita" src="img/direita.png" alt=""/></div></div><div class="linha"></div>'+'<!-- PRODUTOS LIMITADOS --><div id="texto-produtos-limitados"><h4>PRODUTOS LIMITADOS</h4></div><div id="produtos-limitados"><div class="seta-esquerda"><img class="icon-esquerda" src="img/esquerda.png" alt="" /></div><div id="vestido-1"><img id="vestido-rosa" src="img/vestido-rosa.png" alt="" onclick="selecionaProd(1)"/><p class="precos" id="areaPrecoV2">'+'</p></div><div id="vestido-2"><img id="vestido-verde" src="img/vestido-verde.png" alt="" onclick="selecionaProd(0)"/><p class="precos" id="areaPrecoV1">'+'</p></div><div id="vestido-3"><img id="vestido-roxo" src="img/vestid-roxo.png" alt="" onclick="selecionaProd(2)"/><p class="precos" id="areaPrecoV3">'+'</p></div><div class="seta-direita"><img class="icon-direita" src="img/direita.png" alt="" /> </div></div></main>'
 
     fetch('produtos.json')
     .then(response => response.json())
@@ -66,6 +68,28 @@ function selecionaProd(nProd){
     dollarSelecionaProd(corpo.saia1.price, corpo.saia2.price, corpo.saia3.price, corpo.vestido4.price)})
 }
 
+function mainCadastrar(){
+    document.title = "Cadastre-se";
+    document.getElementById("main").innerHTML = '<div class="centraliza"><div id="caixa-login"><h5 class="alinhar-txt">Cadastro</h5><h6 id="h6-2">Cadastre-se e faça parte!</h6><div><div id="inpt-1"><label for="">Nome:</label><input class="inputt" id="nome" type="text"></div><div id="inpt-2"><label for="">Sobrenome:</label><input id="sobrenome" class="inputt" type="text"></div><div id="inpt-3"><label for="">E-mail:</label><input id="email" class="inputt" type="text"></div><div id="inpt-4"><label for="">Senha:</label><input id="senha" class="inputt" type="password"></div><div id="inpt-5"><label for="">Confirmar senha:</label><input id="confirmarSenha" class="inputt" type="password"></div><div class="align" id="align"><a><p class="texto-abaixo" onclick="mainLogin()" >Já tem conta?</p></a><button onclick="cadastrar()" class="btn-login">Cadastrar</button></div></div></div></div>';
+
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+    })
+}
+
+function mainLogin(){
+    document.title = "Entre";
+    document.getElementById("main").innerHTML ='<div class="centraliza"><div id="caixa-login"><h5 class="alinhar-txt">Login</h5><h6>Efetue o login para continuar</h6><div><div class="inpt-1"><label for="">E-mail:</label><input class="inputt" type="text" id="emailAcesso"></div><div class="inpt-2"><label for="">Senha:</label><input class="inputt" type="password" id="senhaAcesso"></div><div class="align"><a><p onclick="mainCadastrar()" class="texto-abaixo">Não tem conta? Cadastre-se!</p></a><button class="btn-login" onclick="login()">Entrar</button></div></div></div></div>';
+
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+    })
+}
+
 const usuario1 = {"nome":"Maria", "email":"maria@gmail.com", "senha":"1234", "favoritos":[]}
 const usuario2 = {"nome":"Carla", "email":"carla@gmail.com", "senha":"4321", "favoritos":[]}
 var usuarios = [usuario1, usuario2]
@@ -74,7 +98,7 @@ var usuarioConectado;
 
 function opcaoLogin(){
     if(usuarioConectado == null || usuarioConectado == ""){
-        document.getElementById('dropdown-content-login').innerHTML = "<a onclick='login()'>Faça Login</a>"      
+        document.getElementById('dropdown-content-login').innerHTML = "<a onclick='mainLogin()'>Faça Login</a>"      
         document.getElementById('dropdown-content-login').innerHTML += "<a onclick='mainCadastrar()'>Cadastre-se</a>"      
         return;
     }else{
@@ -93,9 +117,19 @@ function cadastrar(){
         }
     }
     var usuario = new Object
-    usuario.nome = document.getElementById("nome")
-    usuario.email = document.getElementById("email")
-    usuario.senha = document.getElementById("senha")
+    usuario.nome = document.getElementById("nome").value + " " + document.getElementById("sobrenome").value
+    usuario.email = document.getElementById("email").value
+    usuario.favoritos = []
+    if(document.getElementById("senha").value == document.getElementById("confirmarSenha").value){
+        usuario.senha = document.getElementById("senha").value
+    }else{
+        swal({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'As senha digitadas não coincidem!',
+        })
+        return;
+    }
 
     var jsonForm = JSON.stringify(usuario.valueOf());
     const usuarioCadastrado = JSON.parse(jsonForm);
@@ -105,47 +139,26 @@ function cadastrar(){
 }
 
 function login(){
-    var senhaCorreta;
-    swal("Digite seu email",{
-        content:{
-            element: "input",
-            attributes: {
-                placeholder: "maria@gmail.com",
-                type:"email",
-            }
-        }
-    }).then((userEmail) => {
-        for(x=0;x<usuarios.length; x++){
-            if(usuarios[x].email == userEmail){
-                senhaCorreta = usuarios[x].senha
-                usuarioTentandoSeConectar = usuarios[x]
-                swal("Olá "+usuarios[x].nome+". Digite sua senha",{
-                    content:{
-                        element:"input",
-                        attributes:{
-                            type:"password",
-                            placeholder: "1234",
-                        }
-                    }
-                }).then((userSenha) => {              
-                    verificaSenha(userSenha, senhaCorreta, usuarioTentandoSeConectar)
-                })
+    var emailAcesso = document.getElementById("emailAcesso").value;
+    var senhaAcesso = document.getElementById("senhaAcesso").value;
+    for(x=0;x<usuarios.length; x++){
+        if(usuarios[x].email == emailAcesso){
+            senhaCorreta = usuarios[x].senha
+            if(usuarios[x].senha == senhaAcesso){
+                usuarioConectado = usuarios[x]
+                swal("Login realizado")
+                console.log(usuarioConectado)
+                index();
                 return;
-            }
-            if(x==usuarios.length-1){
-                swal("Esse email não está cadastrado. Login não realizado")
+            } else{
+                swal("senha incorreta. Login não realizado")
                 return;
             }
         }
-    })
-}
-function verificaSenha(userSenha, senhaCorreta, usuario){
-    if(userSenha == senhaCorreta){
-        usuarioConectado = usuario
-        swal("Login realizado")
-        console.log(usuarioConectado)
-    } else{
-        swal("senha incorreta. Login não realizado")
+        if(x==usuarios.length-1){
+            swal("Esse email não está cadastrado. Login não realizado")
+            return;
+        }
     }
 }
 
