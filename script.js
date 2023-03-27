@@ -8,7 +8,7 @@ var listaGlobal
 index()
 function index(){
     document.title = "home";
-    document.getElementById("main").innerHTML = '<div id="alinhar-titulos"><div id="container-titulo"><h1>A ASCENSÃO DO<br />VINTAGE 60"S</h1></div><div id="container-subtitulo"><h3>OS MELHORES VESTIDOS DA ÉPOCA</h3><img id="new" src="img/flor-surge.png"></div></div>'+'<div id="categorias"><div id="categoria-1"><div id="oculos"><img id="icon-oculos" src="img/icon-oculos.png" alt="" /><p id="txt-1">ÓCULOS</p></div><div id="bolsas"><img id="icon-bolsa" src="img/icon-bolsa.png" alt="" /><p id="txt-2">BOLSAS</p></div><div id="chapeus"><img id="icon-chapeu" src="img/icon-boina.png" alt="" /><p id="txt-3">CHAPÉUS</p></div></div><div id="categoria-2"><div id="vestidos"><img id="icon-vestido" src="img/icon-vestido.png" alt="" /><p id="txt-4">VESTIDOS</p></div><div id="sapatos"><img id="icon-sapato" src="img/icon-sapato.png" alt="" /><p id="txt-5">SAPATOS</p></div><div id="joias"><img id="icon-joia" src="img/icon-joias.png" alt="" /><p id="txt-6">JOIAS</p></div></div></div><!-- PRODUTOS --><div id="produtos-modelos"><swiper-container class="mySwiper" slides-per-view="3" centered-slides="false" space-between="30" pagination="true"pagination-type="fraction" navigation="true"><swiper-slide><img src="img/modelo-1.png" alt="" onclick="selecionaProd(4)"></swiper-slide><swiper-slide><img src="img/modelo-2.png" alt="" onclick="selecionaProd(5)"></swiper-slide><swiper-slide><img src="img/modelo-3.png" alt="" onclick="selecionaProd(6)"></swiper-slide><swiper-slide><img src="img/modelo-5.webp" alt=""onclick="selecionaProd(10)"></swiper-slide><swiper-slide><img src="img/modelo-6.webp" alt=" "onclick="selecionaProd(11)"></swiper-slide><swiper-slide><img src="img/modelo-7.webp" alt="" "onclick="selecionaProd(12)"></swiper-slide><swiper-slide><img src="img/modelo-8.webp" alt="" "onclick="selecionaProd(13)"></swiper-slide><swiper-slide><img src="img/modelo-9.webp" alt="" ></swiper-slide><swiper-slide><img src="img/modelo-10.webp" alt=""></swiper-slide></swiper-container><div class="linha"></div>'+'<!-- PRODUTOS LIMITADOS --><div id="texto-produtos-limitados"><h4>PRODUTOS LIMITADOS</h4></div><div id="produtos-limitados"><div class="seta-esquerda"><img class="icon-esquerda" src="img/esquerda.png" alt="" /></div><div id="vestido-1"><img id="vestido-rosa" src="img/vestido-rosa.png" alt="" onclick="selecionaProd(1)"/><p class="precos" id="areaPrecoV2">'+'</p></div><div id="vestido-2"><img id="vestido-verde" src="img/vestido-verde.png" alt="" onclick="selecionaProd(0)"/><p class="precos" id="areaPrecoV1">'+'</p></div><div id="vestido-3"><img id="vestido-roxo" src="img/vestid-roxo.png" alt="" onclick="selecionaProd(2)"/><p class="precos" id="areaPrecoV3">'+'</p></div><div class="seta-direita"><img class="icon-direita" src="img/direita.png" alt="" /> </div></div></main>'
+    document.getElementById("main").innerHTML = '<div id="alinhar-titulos"><div id="container-titulo"><h1>A ASCENSÃO DO<br />VINTAGE 60"S</h1></div><div id="container-subtitulo"><h3>OS MELHORES VESTIDOS DA ÉPOCA</h3><img id="new" src="img/flor-surge.png"></div></div>'+'<div id="categorias"><div id="categoria-1"><div id="oculos"><img id="icon-oculos" src="img/icon-oculos.png" alt="" /><p id="txt-1">ÓCULOS</p></div><div id="bolsas"><img id="icon-bolsa" src="img/icon-bolsa.png" alt="" /><p id="txt-2">BOLSAS</p></div><div id="chapeus"><img id="icon-chapeu" src="img/icon-boina.png" alt="" /><p id="txt-3">CHAPÉUS</p></div></div><div id="categoria-2"><div id="vestidos"><img id="icon-vestido" src="img/icon-vestido.png" alt="" /><p id="txt-4">VESTIDOS</p></div><div id="sapatos"><img id="icon-sapato" src="img/icon-sapato.png" alt="" /><p id="txt-5">SAPATOS</p></div><div id="joias"><img id="icon-joia" src="img/icon-joias.png" alt="" /><p id="txt-6">JOIAS</p></div></div></div><!-- PRODUTOS --><div id="produtos-modelos"><swiper-container class="mySwiper" slides-per-view="3" centered-slides="false" space-between="30" pagination="true"pagination-type="fraction" navigation="true"><swiper-slide><img src="img/modelo-1.png" alt="" onclick="selecionaProd(4)"></swiper-slide><swiper-slide><img src="img/modelo-2.png" alt="" onclick="selecionaProd(5)"></swiper-slide><swiper-slide><img src="img/modelo-3.png" alt="" onclick="selecionaProd(6)"></swiper-slide><swiper-slide><img src="img/modelo-5.webp" alt=""onclick="selecionaProd(10)"></swiper-slide><swiper-slide><img src="img/modelo-6.webp" alt=" "onclick="selecionaProd(11)"></swiper-slide><swiper-slide><img src="img/modelo-7.webp" alt="" onclick="selecionaProd(12)"></swiper-slide><swiper-slide><img src="img/modelo-8.webp" alt="" onclick="selecionaProd(13)"></swiper-slide><swiper-slide><img src="img/modelo-9.webp" alt="" onclick="selecionaProd(14)"></swiper-slide><swiper-slide><img src="img/modelo-10.webp" alt="" onclick="selecionaProd(15)"></swiper-slide></swiper-container><div class="linha"></div>'+'<!-- PRODUTOS LIMITADOS --><div id="texto-produtos-limitados"><h4>PRODUTOS LIMITADOS</h4></div><div id="produtos-limitados"><div class="seta-esquerda"><img class="icon-esquerda" src="img/esquerda.png" alt="" /></div><div id="vestido-1"><img id="vestido-rosa" src="img/vestido-rosa.png" alt="" onclick="selecionaProd(1)"/><p class="precos" id="areaPrecoV2">'+'</p></div><div id="vestido-2"><img id="vestido-verde" src="img/vestido-verde.png" alt="" onclick="selecionaProd(0)"/><p class="precos" id="areaPrecoV1">'+'</p></div><div id="vestido-3"><img id="vestido-roxo" src="img/vestid-roxo.png" alt="" onclick="selecionaProd(2)"/><p class="precos" id="areaPrecoV3">'+'</p></div><div class="seta-direita"><img class="icon-direita" src="img/direita.png" alt="" /> </div></div></main>'
 
     fetch('produtos.json')
     .then(response => response.json())
@@ -22,7 +22,7 @@ function selecionaProd(nProd){
     .then(response => response.json())
     .then(corpo => { 
         document.title = "produtos";
-        var todosProds = [corpo.vestido1, corpo.vestido2, corpo.vestido3, corpo.vestido4, corpo.modelo1, corpo.modelo2, corpo.modelo3, corpo.saia1, corpo.saia2, corpo.saia3, corpo.modelo4, corpo.modelo5, corpo.modelo6, corpo.modelo7]   
+        var todosProds = [corpo.vestido1, corpo.vestido2, corpo.vestido3, corpo.vestido4, corpo.modelo1, corpo.modelo2, corpo.modelo3, corpo.saia1, corpo.saia2, corpo.saia3, corpo.modelo4, corpo.modelo5, corpo.modelo6, corpo.modelo7, corpo.modelo8, corpo.modelo9]   
         listaGlobal = todosProds
 
     document.getElementById("main").innerHTML = '<div id="container-produto"><div id="foto-produto"><div id="espaco-fotos"><div class="caixa"></div><div class="caixa"></div><div class="caixa"></div><div class="caixa"></div><div class="caixa"></div></div><!--<img id="vestido_verde" src="img/vestido-verde.png" alt="" />--></div><div id="detalhes-produto"><h1 id="titulo-produto"></h1><h3 id="titulo-preco"></h3><!-- <div> Ícones feitos por <a href="https://www.flaticon.com/br/autores/smashicons" title="Smashicons"> Smashicons </a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com"</a></div> --><div id="alinhar-estrelas"></div><p id="titulo-avaliacao"></p><div id="produtos-semelhantes"><button id="botao-semelhantes">MODELOS SEMELHANTES <img id="seta-btn" src="img/seta-btn.png" alt="" /></button></div></div></div><!--Frete--><div id="alinhar-produtos"><div id="funcao-frete"><label id="txt-frete" for="">CALCULE O FRETE:</label><div id="frete"><input type="number" id="cep" placeholder="CEP"><button id="btn-frete" onclick="calcularFrete()">CALCULAR</button><div id="valorFrete"></div></div></div><div id="funcao-compra"><div id="funcao-quantidade"><p>QUANTIDADE</p><button id="btn-menos" onclick="diminuiQuantCompra()"><img id="menos" src="img/menos.png" alt="" /></button><input type="number" id="quantProd" value="1" readonly><button onclick="aumentaQuantCompra()"id="btn-mais"><img id="mais" src="img/mais.png" alt="" /></button></div><div id="comprar"><button id="btn-compra">COMPRAR</button><button id="btn-coracao" onclick="favoritar('+nProd+')"><img id="coracaoo" src="img/coracao-vazio.png"></button></div></div></div><div class="linha"></div>'
@@ -198,7 +198,7 @@ function novoComentar(nProd){
         return;
     }
 
-    swal("Escolha a pontuação, sendo 0 equivalente a pouco satisfeito e 5 quivalendo a muito satisfeito",{
+    swal("Escolha a pontuação, sendo 0 equivalente a pouco satisfeito e 5 equivalendo a muito satisfeito",{
          content: {
             element: "input",
             attributes: {
@@ -213,15 +213,15 @@ function novoComentar(nProd){
             swal("Ops, escolha uma nota entre 0 e 5")
             return;
         }
-        swal("Escreva seu comentarios:", {
+        swal("Escreva seu comentários:", {
             content: "input",
         })
         .then((value) => {
             if(value == null || value ==""){
-                swal("ops, parece que você esqueceu de escrever seu comentario. Tente novamente.");
+                swal("ops, parece que você esqueceu de escrever seu comentário. Tente novamente.");
                 return;
             }
-            swal(`Seu comentario é: ${value}`);
+            swal(`Seu comentário é: ${value}`);
             texto = value;
             novoComentario.push([nProd, usuarioConectado.nome, valuee, texto]);
             selecionaProd(nProd)
@@ -448,7 +448,7 @@ function favoritar(nProd){
     }
     for(x=0; x<usuarioConectado.favoritos.length; x++){
         if(usuarioConectado.favoritos[x] == nProd){
-            swal("esse itam já está em sua lista de desejo",{
+            swal("Esse item já está em sua lista de desejo!",{
             buttons: {
                 Manter: true,
                 Excluir: true,
