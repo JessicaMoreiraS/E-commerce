@@ -38,16 +38,17 @@
         <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
           <div class="container">
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed"data-toggle="collapse" data-target="#menu">
+              <button type="button" class="navbar-toggle collapsed"data-toggle="collapse" data-target="#menu" onmouseenter="opcaoLoginMob()">
                 <span class="icon-bar"><img src="" alt=""></span> <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
             </div>
             <div class="collapse navbar-collapse" id="menu">
               <ul class="nav navbar-nav" id="a-nav">
-                <li><a onclick="mainLogin()">Login</a></li>
-                <li><a onclick="mainCadastrar()">Cadastre-se</a></li>
-                <li><a>Favoritos</a></li>
+                <li id="loginOuOla"><a onclick="mainLogin()">Login</a></li>
+                <li id="logoutOuCadastreSe"><a onclick="mainCadastrar()">Cadastre-se</a></li>
+                <li><a onmouseenter="mostrarListaDeDesejosMob()">Favoritos</a></li>
+                <ul id="dropFavoritosMob"></ul>
                 <li><a>Carrinho</a></li>
                 <li><a onclick="index()">Home</a></li>
               </ul>
