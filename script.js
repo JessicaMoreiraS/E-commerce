@@ -8,7 +8,7 @@ var listaGlobal
 index()
 function index(){
     document.title = "home";
-    document.getElementById("main").innerHTML = '<div id="alinhar-titulos"><div id="container-titulo"><h1>A ASCENSÃO DO<br />VINTAGE 60"S</h1></div><div id="container-subtitulo"><h3>OS MELHORES VESTIDOS DA ÉPOCA</h3><img id="new" src="img/flor-surge.png"></div></div>'+'<div id="categorias"><div id="categoria-1"><div id="oculos"><img id="icon-oculos" src="img/icon-oculos.png" alt="" /><p id="txt-1">ÓCULOS</p></div><div id="bolsas"><img id="icon-bolsa" src="img/icon-bolsa.png" alt="" /><p id="txt-2">BOLSAS</p></div><div id="chapeus"><img id="icon-chapeu" src="img/icon-boina.png" alt="" /><p id="txt-3">CHAPÉUS</p></div></div><div id="categoria-2"><div id="vestidos"><img id="icon-vestido" src="img/icon-vestido.png" alt="" /><p id="txt-4">VESTIDOS</p></div><div id="sapatos"><img id="icon-sapato" src="img/icon-sapato.png" alt="" /><p id="txt-5">SAPATOS</p></div><div id="joias"><img id="icon-joia" src="img/icon-joias.png" alt="" /><p id="txt-6">JOIAS</p></div></div></div><!-- PRODUTOS --><div id="produtos-modelos"><div class="seta-esquerda"><a><img class="icon-esquerda" src="img/esquerda.png" alt=""/></a></div><div id="modelo-1"><img id="modelo-um" src="img/modelo-1.png" alt="" onclick="selecionaProd(4)"/><p class="precos" id="areaPrecoM1">'+'</p></div><div id="modelo-2"><img id="modelo-dois" src="img/modelo-2.png" alt="" onclick="selecionaProd(5)"/><p class="precos" id="areaPrecoM2">'+'</p></div><div id="modelo-3"><img id="modelo-tres" src="img/modelo-3.png" alt="" onclick="selecionaProd(6)"/><p class="precos" id="areaPrecoM3">'+'</p></div><div class="seta-direita"><img class="icon-direita" src="img/direita.png" alt=""/></div></div><div class="linha"></div>'+'<!-- PRODUTOS LIMITADOS --><div id="texto-produtos-limitados"><h4>PRODUTOS LIMITADOS</h4></div><div id="produtos-limitados"><div class="seta-esquerda"><img class="icon-esquerda" src="img/esquerda.png" alt="" /></div><div id="vestido-1"><img id="vestido-rosa" src="img/vestido-rosa.png" alt="" onclick="selecionaProd(1)"/><p class="precos" id="areaPrecoV2">'+'</p></div><div id="vestido-2"><img id="vestido-verde" src="img/vestido-verde.png" alt="" onclick="selecionaProd(0)"/><p class="precos" id="areaPrecoV1">'+'</p></div><div id="vestido-3"><img id="vestido-roxo" src="img/vestid-roxo.png" alt="" onclick="selecionaProd(2)"/><p class="precos" id="areaPrecoV3">'+'</p></div><div class="seta-direita"><img class="icon-direita" src="img/direita.png" alt="" /> </div></div></main>'
+    document.getElementById("main").innerHTML = '<div id="alinhar-titulos"><div id="container-titulo"><h1>A ASCENSÃO DO<br />VINTAGE 60"S</h1></div><div id="container-subtitulo"><h3>OS MELHORES VESTIDOS DA ÉPOCA</h3><img id="new" src="img/flor-surge.png"></div></div>'+'<div id="categorias"><div id="categoria-1"><div id="oculos"><img id="icon-oculos" src="img/icon-oculos.png" alt="" /><p id="txt-1">ÓCULOS</p></div><div id="bolsas"><img id="icon-bolsa" src="img/icon-bolsa.png" alt="" /><p id="txt-2">BOLSAS</p></div><div id="chapeus"><img id="icon-chapeu" src="img/icon-boina.png" alt="" /><p id="txt-3">CHAPÉUS</p></div></div><div id="categoria-2"><div id="vestidos"><img id="icon-vestido" src="img/icon-vestido.png" alt="" /><p id="txt-4">VESTIDOS</p></div><div id="sapatos"><img id="icon-sapato" src="img/icon-sapato.png" alt="" /><p id="txt-5">SAPATOS</p></div><div id="joias"><img id="icon-joia" src="img/icon-joias.png" alt="" /><p id="txt-6">JOIAS</p></div></div></div><!-- PRODUTOS --><div id="produtos-modelos"><swiper-container class="mySwiper" slides-per-view="3" centered-slides="false" space-between="30" pagination="true"pagination-type="fraction" navigation="true"><swiper-slide><img src="img/modelo-1.png" alt="" onclick="selecionaProd(4)"></swiper-slide><swiper-slide><img src="img/modelo-2.png" alt="" onclick="selecionaProd(5)"></swiper-slide><swiper-slide><img src="img/modelo-3.png" alt="" onclick="selecionaProd(6)"></swiper-slide><swiper-slide><img src="img/modelo-5.webp" alt=""onclick="selecionaProd(10)"></swiper-slide><swiper-slide><img src="img/modelo-6.webp" alt=" "onclick="selecionaProd(11)"></swiper-slide><swiper-slide><img src="img/modelo-7.webp" alt="" "onclick="selecionaProd(12)"></swiper-slide><swiper-slide><img src="img/modelo-8.webp" alt="" "onclick="selecionaProd(13)"></swiper-slide><swiper-slide><img src="img/modelo-9.webp" alt="" ></swiper-slide><swiper-slide><img src="img/modelo-10.webp" alt=""></swiper-slide></swiper-container><div class="linha"></div>'+'<!-- PRODUTOS LIMITADOS --><div id="texto-produtos-limitados"><h4>PRODUTOS LIMITADOS</h4></div><div id="produtos-limitados"><div class="seta-esquerda"><img class="icon-esquerda" src="img/esquerda.png" alt="" /></div><div id="vestido-1"><img id="vestido-rosa" src="img/vestido-rosa.png" alt="" onclick="selecionaProd(1)"/><p class="precos" id="areaPrecoV2">'+'</p></div><div id="vestido-2"><img id="vestido-verde" src="img/vestido-verde.png" alt="" onclick="selecionaProd(0)"/><p class="precos" id="areaPrecoV1">'+'</p></div><div id="vestido-3"><img id="vestido-roxo" src="img/vestid-roxo.png" alt="" onclick="selecionaProd(2)"/><p class="precos" id="areaPrecoV3">'+'</p></div><div class="seta-direita"><img class="icon-direita" src="img/direita.png" alt="" /> </div></div></main>'
 
     fetch('produtos.json')
     .then(response => response.json())
@@ -22,7 +22,7 @@ function selecionaProd(nProd){
     .then(response => response.json())
     .then(corpo => { 
         document.title = "produtos";
-        var todosProds = [corpo.vestido1, corpo.vestido2, corpo.vestido3, corpo.vestido4, corpo.modelo1, corpo.modelo2, corpo.modelo3, corpo.saia1, corpo.saia2, corpo.saia3]   
+        var todosProds = [corpo.vestido1, corpo.vestido2, corpo.vestido3, corpo.vestido4, corpo.modelo1, corpo.modelo2, corpo.modelo3, corpo.saia1, corpo.saia2, corpo.saia3, corpo.modelo4, corpo.modelo5, corpo.modelo6, corpo.modelo7]   
         listaGlobal = todosProds
 
     document.getElementById("main").innerHTML = '<div id="container-produto"><div id="foto-produto"><div id="espaco-fotos"><div class="caixa"></div><div class="caixa"></div><div class="caixa"></div><div class="caixa"></div><div class="caixa"></div></div><!--<img id="vestido_verde" src="img/vestido-verde.png" alt="" />--></div><div id="detalhes-produto"><h1 id="titulo-produto"></h1><h3 id="titulo-preco"></h3><!-- <div> Ícones feitos por <a href="https://www.flaticon.com/br/autores/smashicons" title="Smashicons"> Smashicons </a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com"</a></div> --><div id="alinhar-estrelas"></div><p id="titulo-avaliacao"></p><div id="produtos-semelhantes"><button id="botao-semelhantes">MODELOS SEMELHANTES <img id="seta-btn" src="img/seta-btn.png" alt="" /></button></div></div></div><!--Frete--><div id="alinhar-produtos"><div id="funcao-frete"><label id="txt-frete" for="">CALCULE O FRETE:</label><div id="frete"><input type="number" id="cep" placeholder="CEP"><button id="btn-frete" onclick="calcularFrete()">CALCULAR</button><div id="valorFrete"></div></div></div><div id="funcao-compra"><div id="funcao-quantidade"><p>QUANTIDADE</p><button id="btn-menos" onclick="diminuiQuantCompra()"><img id="menos" src="img/menos.png" alt="" /></button><input type="number" id="quantProd" value="1" readonly><button onclick="aumentaQuantCompra()"id="btn-mais"><img id="mais" src="img/mais.png" alt="" /></button></div><div id="comprar"><button id="btn-compra">COMPRAR</button><button id="btn-coracao" onclick="favoritar('+nProd+')"><img id="coracaoo" src="img/coracao-vazio.png"></button></div></div></div><div class="linha"></div>'
@@ -242,7 +242,7 @@ function converte(valorEmDolar){
     })
 }
 //fetch Dollar index
-function dollarIndex(m1, m2, m3, v1, v2, v3){
+function dollarIndex(m1, m2, m3, v1, v2, v3, v4, v5, v6, v7, v8, v9){
     fetch(`https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL`).then(response=>{
         return response.json()
     }).then(economiaa => { 
@@ -252,6 +252,15 @@ function dollarIndex(m1, m2, m3, v1, v2, v3){
         document.getElementById("areaPrecoV1").innerHTML = "US$"+v1+" - R$"+arredondar(economiaa.USDBRL.bid*v1);
         document.getElementById("areaPrecoV2").innerHTML = "US$"+v2+" - R$"+arredondar(economiaa.USDBRL.bid*v2);
         document.getElementById("areaPrecoV3").innerHTML = "US$"+v3+" - R$"+arredondar(economiaa.USDBRL.bid*v3);
+        document.getElementById("areaPrecoV4").innerHTML = "US$"+v4+" - R$"+arredondar(economiaa.USDBRL.bid*v4);
+        document.getElementById("areaPrecoV5").innerHTML = "US$"+v5+" - R$"+arredondar(economiaa.USDBRL.bid*v5);
+        document.getElementById("areaPrecoV6").innerHTML = "US$"+v6+" - R$"+arredondar(economiaa.USDBRL.bid*v6);
+        document.getElementById("areaPrecoV7").innerHTML = "US$"+v7+" - R$"+arredondar(economiaa.USDBRL.bid*v7);
+        document.getElementById("areaPrecoV8").innerHTML = "US$"+v8+" - R$"+arredondar(economiaa.USDBRL.bid*v8);
+        document.getElementById("areaPrecoV9").innerHTML = "US$"+v9+" - R$"+arredondar(economiaa.USDBRL.bid*v9);
+
+
+
     })
 }
 //fetch Dollar outros produtos
@@ -491,28 +500,3 @@ function mostrarListaDeDesejosMob(){
     }
 }
 
-
-//window.location='produto.html'   //redirecionamento
-
-// if (window.open && posicao != -1) { // Window.opener/open recebe os dados da página que gerou a atual
-//     console.log("open")}
-
-
-// Jéssica, pode tentar arrumar o tamanho do input que criei pra quando clicar no buscar e também posicionar ele certo? Já deixei o ícone de pequisa do cabeçalho como botão
-
-// function buscar(){
-//     var elemento_pai = document.getElementById("icones-direita");
-
-//     // Criar o input ao clicar no elemento de busca
-//     var titulo = document.createElement('input');
-
-    
-//     // Criar texto apenas para constar a criação
-//     var texto = document.createTextNode("");
-    
-//     // Anexar o nó de texto ao elemento input
-//     titulo.appendChild(texto);
-    
-//     // Inserir (anexar) o elemento filho (titulo) ao elemento pai (header)
-//     elemento_pai.appendChild(titulo);
-// }
