@@ -45,10 +45,11 @@
             </div>
             <div class="collapse navbar-collapse" id="menu">
               <ul class="nav navbar-nav" id="a-nav">
-                <li><a href="login.html">Login</a></li>
-                <li><a href="cadastro.html">Cadastre-se</a></li>
-                <li><a href="">Favoritos</a></li>
-                <li><a href="">Carrinho</a></li>
+                <li><a onclick="mainLogin()">Login</a></li>
+                <li><a onclick="mainCadastrar()">Cadastre-se</a></li>
+                <li><a>Favoritos</a></li>
+                <li><a>Carrinho</a></li>
+                <li><a onclick="index()">Home</a></li>
               </ul>
             </div>
           </div>
@@ -67,7 +68,7 @@
           <div id="dropdown-content"></div>
         </div>
         <div id="dropdown-login">
-           <a href="login.html">
+           <a>
             <img id="usuario" src="img/icone-usuario.png"alt=""onmouseenter="opcaoLogin()"/><!--onclick="login()"-->
           </a>
           <div id="dropdown-content-login"></div>
