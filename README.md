@@ -1,7 +1,8 @@
 # E-commerce
 
 <div align="center">
-  <p>e-commerce de produtos importados criados com HTML, CSS, JS e consumo de JSON</p>
+  <p>e-commerce de produtos importados</p>
+  <p>criado com HTML, CSS, JS e consumo de JSON</p>
   <h3>acesse: https://jessicamoreiras.github.io/E-commerce/</h3>
 <div>
 <br/><br/>
@@ -27,8 +28,8 @@
   <p>Faça seu cadastro e depois login para acessar sua conta</p>
   <img src="https://user-images.githubusercontent.com/100448388/227967070-dc52da91-9779-47f0-8d6f-30915af7d304.png" width="48%"/>
   <img src="https://user-images.githubusercontent.com/100448388/227967152-d6b0b791-eda7-43a0-b4f0-5df64065d8a4.png" width="48%"/>
-  <img src="https://user-images.githubusercontent.com/100448388/227966340-7fd55ad8-948d-4e6b-a520-dd6de5ed2e29.png" width="48%"/>
-  <img src="https://user-images.githubusercontent.com/100448388/227966493-a63092c0-27a7-4149-9645-01e918dc7a91.png" width="48%"/>
+  <img src="https://user-images.githubusercontent.com/100448388/228941246-d4a8d9cc-2de0-421f-ad13-d6d399bf1fbb.png" height="408em"/>
+  <img src="https://user-images.githubusercontent.com/100448388/228941329-c56a334f-0fbf-4252-b877-1cdd25f24696.png" height="408em"/>
 <div>
 
 <br/><br/>
@@ -43,5 +44,7 @@
 
 <div align="center">
   <p>Adicione seus produtos favoritos na sua lista de desejos:</p>
-  <img src="https://user-images.githubusercontent.com/100448388/227967218-25d4a434-eef9-4abc-9cfc-390d0de07232.png" width="48%"/>
+  <img src="https://user-images.githubusercontent.com/100448388/227967218-25d4a434-eef9-4abc-9cfc-390d0de07232.png" height="408em"/>
 </div>
+
+todos os valores e imagens usados nesse site são apenas demonstrativos e para fins de aprendizado em desenvolvimento de sistemas
