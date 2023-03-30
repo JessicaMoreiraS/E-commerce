@@ -9,6 +9,7 @@
 
 <div align="center">
   <p>Veja o projeto de e-commercer baseado na venda de roupas femininas no estilo dos anos 60'</p>
+  <p>Utilizes os botões da pagina para navegar</p>
   <img src="https://user-images.githubusercontent.com/100448388/227965305-2397c160-852b-437d-a6bc-97eb9607409f.png" width="80%"/>
 <div>
 
