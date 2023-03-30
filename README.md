@@ -34,10 +34,14 @@
 <br/><br/>
 
 <div align="center">
-  <p>Ao fazer lofin você terá acesso as funcionalidades:</p>
-  <img src="https://user-images.githubusercontent.com/100448388/227967218-25d4a434-eef9-4abc-9cfc-390d0de07232.png" width="48%"/>
-  <img src="https://user-images.githubusercontent.com/100448388/227967316-8c57737e-6da4-44bf-8fb7-1571a7f420bf.png" width="48%"/>
+  <p>Faça comentários:</p>
   <img src="https://user-images.githubusercontent.com/100448388/227967479-a8fb2c6b-4873-4003-812a-077f22f07880.png" width="48%"/>
   <img src="https://user-images.githubusercontent.com/100448388/227967544-35631a40-5163-4978-8629-73c63beaf345.png" width="48%"/>
 </div>
 
+<br/><br/>
+
+<div align="center">
+  <p>Adicione seus produtos favoritos na sua lista de desejos:</p>
+  <img src="https://user-images.githubusercontent.com/100448388/227967218-25d4a434-eef9-4abc-9cfc-390d0de07232.png" width="48%"/>
+</div>
